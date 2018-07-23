@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D1A4421065C1000B18267 /* AppDelegate.swift */; };
 		030D1A4721065C1000B18267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D1A4621065C1000B18267 /* ViewController.swift */; };
-		030D1A4A21065C1000B18267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A4821065C1000B18267 /* Main.storyboard */; };
 		030D1A4F21065C1200B18267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A4E21065C1200B18267 /* Assets.xcassets */; };
 		030D1A5221065C1200B18267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A5021065C1200B18267 /* LaunchScreen.storyboard */; };
 		0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */; };
-		0358FDF321068E5100EF46DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDF221068E5100EF46DA /* Default-568h@2x.png */; };
+		0358FDF9210698C900EF46DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDF8210698C900EF46DA /* Main.storyboard */; };
 		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +20,11 @@
 		030D1A4121065C1000B18267 /* ChoiceFreedom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoiceFreedom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		030D1A4421065C1000B18267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		030D1A4621065C1000B18267 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		030D1A4921065C1000B18267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		030D1A4E21065C1200B18267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030D1A5121065C1200B18267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		030D1A5321065C1200B18267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		030D1A5321065C1200B18267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0358FDF221068E5100EF46DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0358FDF8210698C900EF46DA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
 		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,7 +45,9 @@
 		030D1A3821065C1000B18267 = {
 			isa = PBXGroup;
 			children = (
-				0358FDF221068E5100EF46DA /* Default-568h@2x.png */,
+				0358FDF62106984300EF46DA /* Supporting */,
+				0358FDF52106982500EF46DA /* Controllers */,
+				0358FDF72106985000EF46DA /* Storyboards */,
 				030D1A4321065C1000B18267 /* ChoiceFreedom */,
 				030D1A4221065C1000B18267 /* Products */,
 				17F494CCC131396B4856D2A7 /* Pods */,
@@ -67,14 +67,35 @@
 			isa = PBXGroup;
 			children = (
 				030D1A4421065C1000B18267 /* AppDelegate.swift */,
-				030D1A4621065C1000B18267 /* ViewController.swift */,
-				030D1A4821065C1000B18267 /* Main.storyboard */,
 				030D1A4E21065C1200B18267 /* Assets.xcassets */,
 				030D1A5021065C1200B18267 /* LaunchScreen.storyboard */,
-				030D1A5321065C1200B18267 /* Info.plist */,
 				0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */,
 			);
 			path = ChoiceFreedom;
+			sourceTree = "<group>";
+		};
+		0358FDF52106982500EF46DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				030D1A4621065C1000B18267 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0358FDF62106984300EF46DA /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				030D1A5321065C1200B18267 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0358FDF72106985000EF46DA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0358FDF8210698C900EF46DA /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		17F494CCC131396B4856D2A7 /* Pods */ = {
@@ -158,8 +179,7 @@
 				030D1A5221065C1200B18267 /* LaunchScreen.storyboard in Resources */,
 				0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */,
 				030D1A4F21065C1200B18267 /* Assets.xcassets in Resources */,
-				0358FDF321068E5100EF46DA /* Default-568h@2x.png in Resources */,
-				030D1A4A21065C1000B18267 /* Main.storyboard in Resources */,
+				0358FDF9210698C900EF46DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,14 +261,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		030D1A4821065C1000B18267 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				030D1A4921065C1000B18267 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		030D1A5021065C1200B18267 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -381,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KD922J9MR;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KD922J9MR;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
