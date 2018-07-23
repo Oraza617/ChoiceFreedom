@@ -10,9 +10,11 @@
 		030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D1A4421065C1000B18267 /* AppDelegate.swift */; };
 		030D1A4721065C1000B18267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D1A4621065C1000B18267 /* ViewController.swift */; };
 		030D1A4A21065C1000B18267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A4821065C1000B18267 /* Main.storyboard */; };
-		030D1A4D21065C1000B18267 /* ChoiceFreedom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030D1A4B21065C1000B18267 /* ChoiceFreedom.xcdatamodeld */; };
 		030D1A4F21065C1200B18267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A4E21065C1200B18267 /* Assets.xcassets */; };
 		030D1A5221065C1200B18267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A5021065C1200B18267 /* LaunchScreen.storyboard */; };
+		0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */; };
+		0358FDF321068E5100EF46DA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDF221068E5100EF46DA /* Default-568h@2x.png */; };
+		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,14 @@
 		030D1A4421065C1000B18267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		030D1A4621065C1000B18267 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		030D1A4921065C1000B18267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		030D1A4C21065C1000B18267 /* ChoiceFreedom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChoiceFreedom.xcdatamodel; sourceTree = "<group>"; };
 		030D1A4E21065C1200B18267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030D1A5121065C1200B18267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		030D1A5321065C1200B18267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		030D1A5321065C1200B18267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0358FDF221068E5100EF46DA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
+		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +47,11 @@
 		030D1A3821065C1000B18267 = {
 			isa = PBXGroup;
 			children = (
+				0358FDF221068E5100EF46DA /* Default-568h@2x.png */,
 				030D1A4321065C1000B18267 /* ChoiceFreedom */,
 				030D1A4221065C1000B18267 /* Products */,
+				17F494CCC131396B4856D2A7 /* Pods */,
+				722B9BDCA3744089AC57AA5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +72,26 @@
 				030D1A4E21065C1200B18267 /* Assets.xcassets */,
 				030D1A5021065C1200B18267 /* LaunchScreen.storyboard */,
 				030D1A5321065C1200B18267 /* Info.plist */,
-				030D1A4B21065C1000B18267 /* ChoiceFreedom.xcdatamodeld */,
+				0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */,
 			);
 			path = ChoiceFreedom;
+			sourceTree = "<group>";
+		};
+		17F494CCC131396B4856D2A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */,
+				A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		722B9BDCA3744089AC57AA5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 030D1A5621065C1200B18267 /* Build configuration list for PBXNativeTarget "ChoiceFreedom" */;
 			buildPhases = (
+				CD4BA7EE9B97272BC73983A4 /* [CP] Check Pods Manifest.lock */,
 				030D1A3D21065C1000B18267 /* Sources */,
 				030D1A3E21065C1000B18267 /* Frameworks */,
 				030D1A3F21065C1000B18267 /* Resources */,
+				24C1B6303F811FCBEE6DA7B3 /* [CP] Embed Pods Frameworks */,
+				DCC4852AC15DA7C4D4A7236F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,19 +156,83 @@
 			buildActionMask = 2147483647;
 			files = (
 				030D1A5221065C1200B18267 /* LaunchScreen.storyboard in Resources */,
+				0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */,
 				030D1A4F21065C1200B18267 /* Assets.xcassets in Resources */,
+				0358FDF321068E5100EF46DA /* Default-568h@2x.png in Resources */,
 				030D1A4A21065C1000B18267 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24C1B6303F811FCBEE6DA7B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4BA7EE9B97272BC73983A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChoiceFreedom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCC4852AC15DA7C4D4A7236F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		030D1A3D21065C1000B18267 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030D1A4D21065C1000B18267 /* ChoiceFreedom.xcdatamodeld in Sources */,
 				030D1A4721065C1000B18267 /* ViewController.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,
 			);
@@ -282,11 +376,12 @@
 		};
 		030D1A5721065C1200B18267 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KD922J9MR;
-				INFOPLIST_FILE = ChoiceFreedom/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +395,12 @@
 		};
 		030D1A5821065C1200B18267 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KD922J9MR;
-				INFOPLIST_FILE = ChoiceFreedom/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,19 +434,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		030D1A4B21065C1000B18267 /* ChoiceFreedom.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				030D1A4C21065C1000B18267 /* ChoiceFreedom.xcdatamodel */,
-			);
-			currentVersion = 030D1A4C21065C1000B18267 /* ChoiceFreedom.xcdatamodel */;
-			path = ChoiceFreedom.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 030D1A3921065C1000B18267 /* Project object */;
 }
