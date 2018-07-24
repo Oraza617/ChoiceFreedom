@@ -17,21 +17,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.owais-raza.ChoiceFreedom</string>
+	<string>com.Owais-Raza.ChoiceFreedom</string>
 	<key>PROJECT_ID</key>
 	<string>choicefreedom-13f0a</string>
 	<key>STORAGE_BUCKET</key>
 	<string>choicefreedom-13f0a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:1029414635610:ios:f6fe218283e09f33</string>
 	<key>DATABASE_URL</key>

@@ -13,6 +13,7 @@
 		030D1A5221065C1200B18267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D1A5021065C1200B18267 /* LaunchScreen.storyboard */; };
 		0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */; };
 		0358FDF9210698C900EF46DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDF8210698C900EF46DA /* Main.storyboard */; };
+		0358FE032107949500EF46DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE022107949500EF46DA /* MainViewController.swift */; };
 		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		030D1A5321065C1200B18267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0358FDF8210698C900EF46DA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0358FE022107949500EF46DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
 		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				030D1A4621065C1000B18267 /* ViewController.swift */,
+				0358FE022107949500EF46DA /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0358FE032107949500EF46DA /* MainViewController.swift in Sources */,
 				030D1A4721065C1000B18267 /* ViewController.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,
 			);
