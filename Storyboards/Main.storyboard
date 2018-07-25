@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="w3G-BL-l0Y">
             <objects>
-                <viewController id="fXW-8P-kAN" sceneMemberID="viewController">
+                <viewController id="fXW-8P-kAN" customClass="MainViewController" customModule="ChoiceFreedom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XpI-Jn-7yw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,28 +28,57 @@
             </objects>
             <point key="canvasLocation" x="934" y="-460"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Entry Controller-->
         <scene sceneID="9wb-kd-VdD">
             <objects>
-                <viewController id="TkJ-cE-dv4" sceneMemberID="viewController">
+                <viewController id="TkJ-cE-dv4" customClass="AddEntryController" customModule="ChoiceFreedom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lzB-6I-XKh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
+                                <rect key="frame" x="96" y="154" width="189.5" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
+                                <rect key="frame" x="96" y="248" width="183" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="UploadFirstImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="gfE-LV-QSI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
+                                <rect key="frame" x="108" y="445" width="158" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="UploadSecondImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="IbZ-tS-1Av"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iA1-eC-1c7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="zhI-4D-OPA">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="playButton" destination="x0s-a6-F7F" id="NzC-sB-FhZ"/>
+                        <outlet property="playButtonTwo" destination="Tlg-ZP-3Xb" id="1pV-BX-DFc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5g-bp-tSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="246"/>
+            <point key="canvasLocation" x="933.60000000000002" y="245.12743628185908"/>
         </scene>
-        <!--View Controller-->
+        <!--Results Controller-->
         <scene sceneID="yzK-Yq-Ay8">
             <objects>
-                <viewController id="c87-Im-2hf" sceneMemberID="viewController">
+                <viewController id="c87-Im-2hf" customClass="ResultsController" customModule="ChoiceFreedom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWN-Zj-6ct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

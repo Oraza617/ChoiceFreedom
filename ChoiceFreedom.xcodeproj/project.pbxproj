@@ -14,6 +14,10 @@
 		0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */; };
 		0358FDF9210698C900EF46DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0358FDF8210698C900EF46DA /* Main.storyboard */; };
 		0358FE032107949500EF46DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE022107949500EF46DA /* MainViewController.swift */; };
+		0358FE3E2107A54B00EF46DA /* AddEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE3D2107A54B00EF46DA /* AddEntryController.swift */; };
+		0358FE402107A57600EF46DA /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE3F2107A57600EF46DA /* ResultsController.swift */; };
+		0358FE432107B98000EF46DA /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE422107B98000EF46DA /* EntryModel.swift */; };
+		0358FE452107BA6300EF46DA /* ImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE442107BA6300EF46DA /* ImageConverter.swift */; };
 		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0358FDF8210698C900EF46DA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0358FE022107949500EF46DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0358FE3D2107A54B00EF46DA /* AddEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryController.swift; sourceTree = "<group>"; };
+		0358FE3F2107A57600EF46DA /* ResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
+		0358FE422107B98000EF46DA /* EntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
+		0358FE442107BA6300EF46DA /* ImageConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConverter.swift; sourceTree = "<group>"; };
 		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
 		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 				0358FDF62106984300EF46DA /* Supporting */,
 				0358FDF52106982500EF46DA /* Controllers */,
 				0358FDF72106985000EF46DA /* Storyboards */,
+				0358FE412107B94400EF46DA /* Models */,
 				030D1A4321065C1000B18267 /* ChoiceFreedom */,
 				030D1A4221065C1000B18267 /* Products */,
 				17F494CCC131396B4856D2A7 /* Pods */,
@@ -81,6 +90,8 @@
 			children = (
 				030D1A4621065C1000B18267 /* ViewController.swift */,
 				0358FE022107949500EF46DA /* MainViewController.swift */,
+				0358FE3D2107A54B00EF46DA /* AddEntryController.swift */,
+				0358FE3F2107A57600EF46DA /* ResultsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,6 +110,15 @@
 				0358FDF8210698C900EF46DA /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0358FE412107B94400EF46DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0358FE422107B98000EF46DA /* EntryModel.swift */,
+				0358FE442107BA6300EF46DA /* ImageConverter.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		17F494CCC131396B4856D2A7 /* Pods */ = {
@@ -256,6 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0358FE432107B98000EF46DA /* EntryModel.swift in Sources */,
+				0358FE452107BA6300EF46DA /* ImageConverter.swift in Sources */,
+				0358FE3E2107A54B00EF46DA /* AddEntryController.swift in Sources */,
+				0358FE402107A57600EF46DA /* ResultsController.swift in Sources */,
 				0358FE032107949500EF46DA /* MainViewController.swift in Sources */,
 				030D1A4721065C1000B18267 /* ViewController.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,
