@@ -16,8 +16,9 @@
 		0358FE032107949500EF46DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE022107949500EF46DA /* MainViewController.swift */; };
 		0358FE3E2107A54B00EF46DA /* AddEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE3D2107A54B00EF46DA /* AddEntryController.swift */; };
 		0358FE402107A57600EF46DA /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE3F2107A57600EF46DA /* ResultsController.swift */; };
-		0358FE432107B98000EF46DA /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE422107B98000EF46DA /* EntryModel.swift */; };
-		0358FE452107BA6300EF46DA /* ImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE442107BA6300EF46DA /* ImageConverter.swift */; };
+		0358FE432107B98000EF46DA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE422107B98000EF46DA /* Entry.swift */; };
+		0358FE47210941CE00EF46DA /* StoringPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE46210941CE00EF46DA /* StoringPhoto.swift */; };
+		0361C6B3210A571400DED245 /* PostingPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0361C6B2210A571400DED245 /* PostingPhoto.swift */; };
 		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +34,9 @@
 		0358FE022107949500EF46DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0358FE3D2107A54B00EF46DA /* AddEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryController.swift; sourceTree = "<group>"; };
 		0358FE3F2107A57600EF46DA /* ResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
-		0358FE422107B98000EF46DA /* EntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
-		0358FE442107BA6300EF46DA /* ImageConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConverter.swift; sourceTree = "<group>"; };
+		0358FE422107B98000EF46DA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		0358FE46210941CE00EF46DA /* StoringPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoringPhoto.swift; sourceTree = "<group>"; };
+		0361C6B2210A571400DED245 /* PostingPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingPhoto.swift; sourceTree = "<group>"; };
 		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
 		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				0358FDF52106982500EF46DA /* Controllers */,
 				0358FDF72106985000EF46DA /* Storyboards */,
 				0358FE412107B94400EF46DA /* Models */,
+				0358FE48210941EB00EF46DA /* Helpers */,
 				030D1A4321065C1000B18267 /* ChoiceFreedom */,
 				030D1A4221065C1000B18267 /* Products */,
 				17F494CCC131396B4856D2A7 /* Pods */,
@@ -115,10 +118,18 @@
 		0358FE412107B94400EF46DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0358FE422107B98000EF46DA /* EntryModel.swift */,
-				0358FE442107BA6300EF46DA /* ImageConverter.swift */,
+				0358FE422107B98000EF46DA /* Entry.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0358FE48210941EB00EF46DA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0358FE46210941CE00EF46DA /* StoringPhoto.swift */,
+				0361C6B2210A571400DED245 /* PostingPhoto.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		17F494CCC131396B4856D2A7 /* Pods */ = {
@@ -276,8 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0358FE432107B98000EF46DA /* EntryModel.swift in Sources */,
-				0358FE452107BA6300EF46DA /* ImageConverter.swift in Sources */,
+				0358FE432107B98000EF46DA /* Entry.swift in Sources */,
+				0361C6B3210A571400DED245 /* PostingPhoto.swift in Sources */,
+				0358FE47210941CE00EF46DA /* StoringPhoto.swift in Sources */,
 				0358FE3E2107A54B00EF46DA /* AddEntryController.swift in Sources */,
 				0358FE402107A57600EF46DA /* ResultsController.swift in Sources */,
 				0358FE032107949500EF46DA /* MainViewController.swift in Sources */,

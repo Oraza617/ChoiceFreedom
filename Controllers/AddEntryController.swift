@@ -11,10 +11,14 @@ import Firebase
 
 class AddEntryController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    //All Entry Outlets
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playButtonTwo: UIButton!
+    @IBOutlet weak var TextField: UITextField!
+    @IBOutlet weak var Submit: UIButton!
     
-    // first button
+    
+    // First button
     @IBAction func UploadFirstImage(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -31,24 +35,20 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         }
     }
     
+    //Allows user to add images to their entry
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             if playButton.isSelected{
-                 playButton.setBackgroundImage(image, for: .normal)
+                //Sets button1 background image
+                playButton.setBackgroundImage(image, for: .normal)
+                //PostPhoto.create(for: image)
             }
             if playButtonTwo.isSelected {
+                //Sets button2 background image
                 playButtonTwo.setBackgroundImage(image, for: .normal)
-                // playButton.imageView?.image
-                // playButtonTwo.imageView?.image
-                
-                // create a new post
-                // pass all param
-                // upload to storage
-                
             }
             
-           
         } else {
             //error message
         }
@@ -72,6 +72,21 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         }
         
     }
+    
+    
+    @IBAction func SubmitEntry(_ sender: Any) {
+        if playButton.currentBackgroundImage != nil &&
+            playButtonTwo.currentBackgroundImage != nil {
+            //PostPhoto.create(for: playButton.currentBackgroundImage!, username: "owais")
+            //PostPhoto.create(for: playButtonTwo.currentBackgroundImage!, username: "owais2")
+        
+        } else {
+            print("it isn't working")
+            
+        }
+    }
+    
+    
     
     
     override func viewDidLoad() {

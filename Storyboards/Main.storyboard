@@ -36,37 +36,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
-                                <rect key="frame" x="96" y="154" width="189.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
+                                <rect key="frame" x="26" y="152" width="323" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
-                                <rect key="frame" x="96" y="248" width="183" height="136"/>
+                                <rect key="frame" x="16" y="345" width="146" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="Add Image"/>
                                 <connections>
                                     <action selector="UploadFirstImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="gfE-LV-QSI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
-                                <rect key="frame" x="108" y="445" width="158" height="142"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Yq-WO9">
+                                <rect key="frame" x="118" y="537" width="139" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+"/>
+                                <color key="backgroundColor" red="0.36729688170429625" green="0.79572613979949247" blue="0.38951338050034012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToRounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SubmitEntry:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="czY-ao-Lwo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
+                                <rect key="frame" x="203" y="345" width="146" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Image"/>
                                 <connections>
                                     <action selector="UploadSecondImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="IbZ-tS-1Av"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aSv-hd-I4B" firstAttribute="top" secondItem="iA1-eC-1c7" secondAttribute="top" constant="132" id="G2f-3m-L7u"/>
+                            <constraint firstItem="aSv-hd-I4B" firstAttribute="centerX" secondItem="lzB-6I-XKh" secondAttribute="centerX" id="eXh-1P-YjU"/>
+                            <constraint firstItem="aSv-hd-I4B" firstAttribute="leading" secondItem="iA1-eC-1c7" secondAttribute="leading" constant="26" id="uze-ME-3pW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iA1-eC-1c7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="zhI-4D-OPA">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="Submit" destination="nUD-Yq-WO9" id="9VK-ed-Lc4"/>
+                        <outlet property="TextField" destination="aSv-hd-I4B" id="sG0-Gd-sgs"/>
                         <outlet property="playButton" destination="x0s-a6-F7F" id="NzC-sB-FhZ"/>
                         <outlet property="playButtonTwo" destination="Tlg-ZP-3Xb" id="1pV-BX-DFc"/>
                     </connections>
