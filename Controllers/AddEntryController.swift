@@ -14,8 +14,8 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
     //All Entry Outlets
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playButtonTwo: UIButton!
-    @IBOutlet weak var TextField: UITextField!
-    @IBOutlet weak var Submit: UIButton!
+    @IBOutlet weak var question: UITextField!
+    @IBOutlet weak var submit: UIButton!
     
     
     // First button
@@ -42,7 +42,6 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
             if playButton.isSelected{
                 //Sets button1 background image
                 playButton.setBackgroundImage(image, for: .normal)
-                //PostPhoto.create(for: image)
             }
             if playButtonTwo.isSelected {
                 //Sets button2 background image
@@ -77,8 +76,9 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBAction func SubmitEntry(_ sender: Any) {
         if playButton.currentBackgroundImage != nil &&
             playButtonTwo.currentBackgroundImage != nil {
-            //PostPhoto.create(for: playButton.currentBackgroundImage!, username: "owais")
-            //PostPhoto.create(for: playButtonTwo.currentBackgroundImage!, username: "owais2")
+            
+            //"Username" needs to be changed after login functionality is added
+            PostPhoto.create(imageOne: playButton.currentBackgroundImage!, imageTwo: playButtonTwo.currentBackgroundImage!, username: "Owais", question: question)
         
         } else {
             print("it isn't working")
@@ -100,12 +100,5 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
-    
-    
-    
 }
 

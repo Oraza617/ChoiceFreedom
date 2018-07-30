@@ -88,10 +88,10 @@
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="Submit" destination="nUD-Yq-WO9" id="9VK-ed-Lc4"/>
-                        <outlet property="TextField" destination="aSv-hd-I4B" id="sG0-Gd-sgs"/>
                         <outlet property="playButton" destination="x0s-a6-F7F" id="NzC-sB-FhZ"/>
                         <outlet property="playButtonTwo" destination="Tlg-ZP-3Xb" id="1pV-BX-DFc"/>
+                        <outlet property="question" destination="aSv-hd-I4B" id="aJq-eD-Nps"/>
+                        <outlet property="submit" destination="nUD-Yq-WO9" id="9VK-ed-Lc4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5g-bp-tSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

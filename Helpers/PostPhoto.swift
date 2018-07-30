@@ -12,31 +12,39 @@ import FirebaseDatabase
 
 struct PostPhoto {
     
-    static func create(for imageOne: UIImage, for imageTwo: UIImage, for username: String) {
-        let imageRefOne = Storage.storage().reference().child("\(username)")
-        StoringPhoto().uploadImage(imageOne, at: imageRefOne) { (downloadURL) in
+    static func create(imageOne: UIImage, imageTwo: UIImage, username: String, question: UITextField) {
+        var downloadUrlOne: String = ""
+        var downloadUrlTwo: String = ""
+        
+        let imageRefOne = StorageReference.newPostImageReference()
+        StorePhoto().uploadImage(imageOne, at: imageRefOne) { (downloadURL) in
             guard let downloadURL = downloadURL else {
                 return
             }
-            let imageOneURL = downloadURL.absoluteString
-            print("\(imageOneURL)")
+            downloadUrlOne = downloadURL.absoluteString
+            
+            let imageRefTwo = StorageReference.newPostImageReference()
+            StorePhoto().uploadImage(imageTwo, at: imageRefTwo) { (downloadURL) in
+                guard let downloadURL = downloadURL else {
+                    return
+                }
+                
+                downloadUrlTwo = downloadURL.absoluteString
+                
+                create(imageOneURL: downloadUrlOne, imageTwoURL: downloadUrlTwo, username: username, question: question)
+            }
         }
-        let imageRefTwo = Storage.storage().reference().child("\(username)")
-        StoringPhoto().uploadImage(imageTwo, at: imageRefTwo) { (downloadURL) in
-            guard let downloadURL = downloadURL else {
-                return
-            }
-        let imageTwoURL = downloadURL.absoluteString
-            print("\(imageTwoURL)")
-    }
 }
     
+    
+    
     private static func create(imageOneURL: String, imageTwoURL: String,
-                               username: String, question: String) {
+                               username: String, question: UITextField) {
+        
         let currentUser = username //This is subject to change once I put in the login info
         
         let entry = Entry(imageOneURL: imageOneURL, imageTwoURL: imageTwoURL,
-                          question: question, username: username)
+                          question: question.text!, username: currentUser)
         
         let dict = entry.dictValue
         

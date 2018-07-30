@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-struct StoringPhoto {
+struct StorePhoto {
     
 func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
 
