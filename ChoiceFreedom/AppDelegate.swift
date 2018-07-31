@@ -19,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
         -> Bool {
             FirebaseApp.configure()
+            
+            let storyboard = UIStoryboard(name: "Login", bundle: .main)
+            
+            if let initialViewController = storyboard.instantiateInitialViewController() {
+                
+                window?.rootViewController = initialViewController
+                
+                window?.makeKeyAndVisible()
+            }
+            
+            
             return true
     }
 
