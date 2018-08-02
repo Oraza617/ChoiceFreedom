@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 struct PostPhoto {
     
-    static func create(imageOne: UIImage, imageTwo: UIImage, username: String, question: UITextField) {
+    static func create(imageOne: UIImage, imageTwo: UIImage, userID: String, question: UITextField) {
         var downloadUrlOne: String = ""
         var downloadUrlTwo: String = ""
         
@@ -31,7 +31,7 @@ struct PostPhoto {
                 
                 downloadUrlTwo = downloadURL.absoluteString
                 
-                create(imageOneURL: downloadUrlOne, imageTwoURL: downloadUrlTwo, username: username, question: question)
+                create(imageOneURL: downloadUrlOne, imageTwoURL: downloadUrlTwo, userID: userID, question: question)
             }
         }
 }
@@ -39,29 +39,19 @@ struct PostPhoto {
     
     
     private static func create(imageOneURL: String, imageTwoURL: String,
-                               username: String, question: UITextField) {
+                               userID: String, question: UITextField) {
         
-        let currentUser = username //This is subject to change once I put in the login info
+        let currentUser = User.current
         
         let entry = Entry(imageOneURL: imageOneURL, imageTwoURL: imageTwoURL,
-                          question: question.text!, username: currentUser)
+                          question: question.text!, userID: currentUser.uid)
         
         let dict = entry.dictValue
         
-        let entryRef = Database.database().reference().child(username).child("Entries")
-        
+        //let entryRef = Database.database().reference().child(username).child("Entries") //Original Solution
+        let entryRef = Database.database().reference().child("Entries").child(currentUser.uid).childByAutoId() //Tony solution
+        //let entryRef = Database.database().reference().child("users").child(firUser.uid).child("Entries") //(New Solution)
         entryRef.updateChildValues(dict)
         
     }
-    
-    
-    
-    
-    
-    //Make two nested versions of the function above and store the URLs
-    //seperately to call later into the relatime database
-    
-    
-    //The private function here is what I should call with all the params
-    //in order to create an instance of the entry in the realtiem database
 }

@@ -42,11 +42,15 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
             if playButton.isSelected{
                 //Sets button1 background image
                 playButton.setBackgroundImage(image, for: .normal)
-            }
+                playButton.setTitle("", for: UIControlState.normal)
+              }
+            
             if playButtonTwo.isSelected {
                 //Sets button2 background image
                 playButtonTwo.setBackgroundImage(image, for: .normal)
+                playButtonTwo.setTitle("", for: UIControlState.normal)
             }
+            
             
         } else {
             //error message
@@ -78,7 +82,7 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
             playButtonTwo.currentBackgroundImage != nil {
             
             //"Username" needs to be changed after login functionality is added
-            PostPhoto.create(imageOne: playButton.currentBackgroundImage!, imageTwo: playButtonTwo.currentBackgroundImage!, username: "Owais", question: question)
+            PostPhoto.create(imageOne: playButton.currentBackgroundImage!, imageTwo: playButtonTwo.currentBackgroundImage!, userID: User.current.uid, question: question)
         
         } else {
             print("it isn't working")

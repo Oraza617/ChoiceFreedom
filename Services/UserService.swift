@@ -30,7 +30,7 @@ struct UserService {
         }
     }
     
-    //Refactoring login view controllers autehntication process
+    //Refactoring login view controllers authentication process
 
         static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
             let ref = Database.database().reference().child("users").child(uid)

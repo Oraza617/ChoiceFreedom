@@ -11,7 +11,7 @@ import Firebase
 
 struct Entry {
     
-    var username: String
+    var userID: String
     var question: String
     var imageOneURL: String
     var imageTwoURL : String
@@ -19,7 +19,7 @@ struct Entry {
     let imageTwoCounter: Int = 0
     
     var dictValue: [String : Any] { //Creating dictionary to store entire entry of data
-        return ["username" : username,
+        return ["username" : userID,
                 "question" : question,
                 "imageOneURL" : imageOneURL,
                 "imageTwoURL" : imageTwoURL,
@@ -27,11 +27,11 @@ struct Entry {
                 "imageTwoCounter" : imageTwoCounter]
     }
     
-    init(imageOneURL: String, imageTwoURL: String, question: String, username: String) {
+    init(imageOneURL: String, imageTwoURL: String, question: String, userID: String ) {
         self.question = question
         self.imageOneURL = imageOneURL
         self.imageTwoURL = imageTwoURL
-        self.username = username
+        self.userID = userID
         
     }
     

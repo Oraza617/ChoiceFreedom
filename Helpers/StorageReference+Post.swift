@@ -14,7 +14,7 @@ extension StorageReference {
     static let dateFormatter = ISO8601DateFormatter()
     
     static func newPostImageReference() -> StorageReference {
-        let uid = "username" //add actual username when you implement login page
+        let uid = User.current.uid
         let timestamp = dateFormatter.string(from: Date())
         
         return Storage.storage().reference().child("\(uid)/entries/\(timestamp).jpg")
