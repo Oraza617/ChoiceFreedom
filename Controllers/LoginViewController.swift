@@ -14,9 +14,7 @@ import FirebaseDatabase
 
 class LoginViewController: UIViewController {
     
-    //Global variable
-    typealias FIRUser = FirebaseAuth.User
-    
+
     //Button for logging in
     @IBOutlet weak var loginButton: UIButton!
     
@@ -42,35 +40,38 @@ class LoginViewController: UIViewController {
 
 
 
+//Global variable
+typealias FIRUser = FirebaseAuth.User
 
-//Responsible for user authentication
+
 extension LoginViewController: FUIAuthDelegate {
     
-    func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser,
+    //Responsible for user authentication
+    func authUI(_ authUI: FUIAuth, didSignInWith
                 authDataResult: AuthDataResult?, error: Error?) {
         
-        if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
-            return
-        }
+        guard let user = authDataResult?.user //Potentially what causes an error bc I'm redeclaring what user is but without this it doesn't work so idk
+          else { return }
         
-        guard let user = authDataResult?.user
-            else { return }
-        
-        let userRef = Database.database().reference().child("users").child(user.uid)
-        
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let user = User(snapshot: snapshot) {
-                print("Welcome back, \(user.username).")
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
+                User.setCurrent(user)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+                
             } else {
-               self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+                // handle new user
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
-        })
-
+        }
     }
-    
 
-    
     
 }
+    
+    
+
 

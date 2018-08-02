@@ -19,19 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
         -> Bool {
             FirebaseApp.configure()
+//
+//            let storyboard = UIStoryboard(name: "Login", bundle: .main)
+//
+//            if let initialViewController = storyboard.instantiateInitialViewController() {
+//
+//                window?.rootViewController = initialViewController
+//
+//                window?.makeKeyAndVisible()
             
-            let storyboard = UIStoryboard(name: "Login", bundle: .main)
-            
-            if let initialViewController = storyboard.instantiateInitialViewController() {
-                
+            let initialViewController = UIStoryboard.initialViewController(for: .login)
                 window?.rootViewController = initialViewController
-                
                 window?.makeKeyAndVisible()
+            
+                return true
+                
             }
-            
-            
-            return true
-    }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -101,6 +106,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 

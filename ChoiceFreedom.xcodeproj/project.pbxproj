@@ -19,6 +19,9 @@
 		0358FE402107A57600EF46DA /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE3F2107A57600EF46DA /* ResultsController.swift */; };
 		0358FE432107B98000EF46DA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE422107B98000EF46DA /* Entry.swift */; };
 		0358FE47210941CE00EF46DA /* StorePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FE46210941CE00EF46DA /* StorePhoto.swift */; };
+		035C37BC2112437400E29BC0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C37BB2112437400E29BC0 /* UserService.swift */; };
+		035C37BE211279E100E29BC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C37BD211279E100E29BC0 /* Constants.swift */; };
+		035C37C121127B0300E29BC0 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C37C021127B0300E29BC0 /* Storyboard+Utility.swift */; };
 		0361C6B3210A571400DED245 /* PostPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0361C6B2210A571400DED245 /* PostPhoto.swift */; };
 		0361EF9A2110C83E0061193B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0361EF992110C83E0061193B /* Login.storyboard */; };
 		03A2979E2110DB7300CBFBA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */; };
@@ -42,6 +45,9 @@
 		0358FE3F2107A57600EF46DA /* ResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
 		0358FE422107B98000EF46DA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		0358FE46210941CE00EF46DA /* StorePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePhoto.swift; sourceTree = "<group>"; };
+		035C37BB2112437400E29BC0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		035C37BD211279E100E29BC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		035C37C021127B0300E29BC0 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		0361C6B2210A571400DED245 /* PostPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhoto.swift; sourceTree = "<group>"; };
 		0361EF992110C83E0061193B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +73,9 @@
 		030D1A3821065C1000B18267 = {
 			isa = PBXGroup;
 			children = (
+				035C37BF21127ADE00E29BC0 /* Extensions */,
 				0358FDF62106984300EF46DA /* Supporting */,
+				035C37BA2112435300E29BC0 /* Services */,
 				0358FDF52106982500EF46DA /* Controllers */,
 				0358FDF72106985000EF46DA /* Storyboards */,
 				0358FE412107B94400EF46DA /* Models */,
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				030D1A5321065C1200B18267 /* Info.plist */,
+				035C37BD211279E100E29BC0 /* Constants.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -145,6 +154,22 @@
 				03AD2762210FAC7400CB7624 /* StorageReference+Post.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		035C37BA2112435300E29BC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				035C37BB2112437400E29BC0 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		035C37BF21127ADE00E29BC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				035C37C021127B0300E29BC0 /* Storyboard+Utility.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		17F494CCC131396B4856D2A7 /* Pods */ = {
@@ -309,10 +334,13 @@
 				0358FE3E2107A54B00EF46DA /* AddEntryController.swift in Sources */,
 				0358FE402107A57600EF46DA /* ResultsController.swift in Sources */,
 				0358FE032107949500EF46DA /* MainViewController.swift in Sources */,
+				035C37BC2112437400E29BC0 /* UserService.swift in Sources */,
 				030D1A4721065C1000B18267 /* ViewController.swift in Sources */,
 				03AD2763210FAC7400CB7624 /* StorageReference+Post.swift in Sources */,
+				035C37C121127B0300E29BC0 /* Storyboard+Utility.swift in Sources */,
 				0346BED52111261300C02443 /* CreateUsernameViewController.swift in Sources */,
 				03A2979E2110DB7300CBFBA0 /* LoginViewController.swift in Sources */,
+				035C37BE211279E100E29BC0 /* Constants.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,
 				03A297A22110F62400CBFBA0 /* User.swift in Sources */,
 			);
