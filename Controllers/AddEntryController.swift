@@ -90,9 +90,6 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         }
     }
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         playButton.isSelected = false
