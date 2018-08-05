@@ -29,6 +29,8 @@ class User: Codable{
         self.username = username
     }
     
+    
+    
     //Singleton that is used to check whether the user is existing or not
     private static var _current: User?
     

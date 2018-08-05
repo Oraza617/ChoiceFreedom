@@ -17,7 +17,7 @@ extension StorageReference {
         let uid = User.current.uid
         let timestamp = dateFormatter.string(from: Date())
         
-        return Storage.storage().reference().child("\(uid)/entries/\(timestamp).jpg")
+        return Storage.storage().reference().child("entries/\(uid)/\(timestamp).jpg")
         
         
         

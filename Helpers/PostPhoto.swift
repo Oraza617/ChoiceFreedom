@@ -47,10 +47,9 @@ struct PostPhoto {
                           question: question.text!, userID: currentUser.uid)
         
         let dict = entry.dictValue
+    
+        let entryRef = Database.database().reference().child("Entries").child(currentUser.uid).childByAutoId()
         
-        //let entryRef = Database.database().reference().child(username).child("Entries") //Original Solution
-        let entryRef = Database.database().reference().child("Entries").child(currentUser.uid).childByAutoId() //Tony solution
-        //let entryRef = Database.database().reference().child("users").child(firUser.uid).child("Entries") //(New Solution)
         entryRef.updateChildValues(dict)
         
     }

@@ -23,6 +23,7 @@
 		035C37BE211279E100E29BC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C37BD211279E100E29BC0 /* Constants.swift */; };
 		035C37C121127B0300E29BC0 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C37C021127B0300E29BC0 /* Storyboard+Utility.swift */; };
 		035C37C32114CD6100E29BC0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035C37C22114CD6100E29BC0 /* Home.storyboard */; };
+		035C37C521150F1700E29BC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C37C421150F1700E29BC0 /* HomeViewController.swift */; };
 		0361C6B3210A571400DED245 /* PostPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0361C6B2210A571400DED245 /* PostPhoto.swift */; };
 		0361EF9A2110C83E0061193B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0361EF992110C83E0061193B /* Login.storyboard */; };
 		03A2979E2110DB7300CBFBA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */; };
@@ -50,6 +51,7 @@
 		035C37BD211279E100E29BC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		035C37C021127B0300E29BC0 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		035C37C22114CD6100E29BC0 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		035C37C421150F1700E29BC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0361C6B2210A571400DED245 /* PostPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhoto.swift; sourceTree = "<group>"; };
 		0361EF992110C83E0061193B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				0358FE3F2107A57600EF46DA /* ResultsController.swift */,
 				0346BED42111261300C02443 /* CreateUsernameViewController.swift */,
 				03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */,
+				035C37C421150F1700E29BC0 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,14 +276,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -343,6 +348,7 @@
 				03AD2763210FAC7400CB7624 /* StorageReference+Post.swift in Sources */,
 				035C37C121127B0300E29BC0 /* Storyboard+Utility.swift in Sources */,
 				0346BED52111261300C02443 /* CreateUsernameViewController.swift in Sources */,
+				035C37C521150F1700E29BC0 /* HomeViewController.swift in Sources */,
 				03A2979E2110DB7300CBFBA0 /* LoginViewController.swift in Sources */,
 				035C37BE211279E100E29BC0 /* Constants.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,

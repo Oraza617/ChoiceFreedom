@@ -1,4 +1,5 @@
 # Uncomment this line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'ChoiceFreedom' do
@@ -10,5 +11,6 @@ target 'ChoiceFreedom' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Kingfisher','~> 4.0'
 
 end
