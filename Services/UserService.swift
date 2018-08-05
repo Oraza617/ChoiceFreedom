@@ -32,13 +32,27 @@ struct UserService {
     }
     
     //Reading from the database in order to display on the home page
-    static func displayPost(completion: @escaping (Entry) -> Void) {
-        let ref = Database.database().reference().child("Entries").child("MODLC5cQwOdkF2aWedbNP9CriKq2").child("-LJ5re2vDK8KL5hSLoOu") //if something goes wrong for UID you changed it rmbr
-
+    static func fetchEntryArray(completion: @escaping ([Entry]) -> Void) {
+        var entryArray = [Entry]()
+        
+        
+        //if child.key != User.current.uid {
+        //......normal stuff here....
+        //}
+        
+        let ref = Database.database().reference().child("Entries").child(User.current.uid) 
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            //let snapshot = snapshot.value as? DataSnapshot 
-            let entry = Entry(snapshot: snapshot)
-            completion(entry!)
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else{
+                return completion([])
+                
+            }
+            
+            for childSnapshot in snapshot {
+                if let entry = Entry(snapshot: childSnapshot) {
+                     entryArray.append(entry)
+                }
+            }
+            completion(entryArray)
         })
     }
     

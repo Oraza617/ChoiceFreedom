@@ -11,10 +11,12 @@ import UIKit
 import Kingfisher
 import FirebaseDatabase
 
+
+
 class HomeViewController: UIViewController {
     
-    var entry: Entry?
-//    var entries = [Entry]() // Just an array of the Entrys that are made
+    var entryArray: [Entry] = [Entry]()
+    var myImageURLs = [(url1: String, url2: String)]()
     
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
@@ -24,22 +26,50 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UserService.displayPost { [unowned self] (entry) in
-            self.entry = entry
+        let dispatchQueue = DispatchGroup()
+        
+        //loading overlay here
+        
+        dispatchQueue.enter()
+
+        UserService.fetchEntryArray { (entryArray) in
+            for entry in entryArray {
+                self.entryArray.append(entry)
+            }
+            
+            //hide overlay here
+            
+            dispatchQueue.leave()
         }
         
-        let imageOneUrl = URL(string: (entry?.imageOneURL)!)
-        imageOne.kf.setImage(with: imageOneUrl)
-        
-        let imageTwoUrl = URL(string: (entry?.imageTwoURL)!)
-        imageTwo.kf.setImage(with: imageTwoUrl)
-        
+        dispatchQueue.notify(queue: DispatchQueue.main) {
+            for entry in self.entryArray {
+                let imageTuple = (entry.imageOneURL, entry.imageTwoURL)
+                self.myImageURLs.append(imageTuple)
+            }
+            
+            let displayImageOneUrl = URL(string: self.myImageURLs[0].url1)
+            self.imageOne.kf.setImage(with: displayImageOneUrl)
+            
+            let displayImageTwoURl = URL(string: self.myImageURLs[0].url2)
+            self.imageTwo.kf.setImage(with: displayImageTwoURl)
+            print(self.myImageURLs)
+            
+            
+            //set random image tuple here
+            
+            
+        }
     }
+    
+    //on image click function
+    //display another random tuple pair of images
+    
 
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-//    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
 
     
     
