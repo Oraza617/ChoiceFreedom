@@ -27,7 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
                                 <rect key="frame" x="16" y="345" width="146" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Image"/>
+                                <state key="normal" title="Add Image">
+                                    <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="UploadFirstImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="gfE-LV-QSI"/>
                                 </connections>
@@ -52,13 +54,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
                                 <rect key="frame" x="203" y="345" width="146" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Image"/>
+                                <state key="normal" title="Add Image">
+                                    <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="UploadSecondImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="IbZ-tS-1Av"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2665251126" green="0.41355538330000002" blue="0.58790279440000004" alpha="0.80091502569999995" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aSv-hd-I4B" firstAttribute="top" secondItem="iA1-eC-1c7" secondAttribute="top" constant="132" id="G2f-3m-L7u"/>
                             <constraint firstItem="aSv-hd-I4B" firstAttribute="centerX" secondItem="lzB-6I-XKh" secondAttribute="centerX" id="eXh-1P-YjU"/>
@@ -87,7 +91,7 @@
                     <view key="view" contentMode="scaleToFill" id="wWN-Zj-6ct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2274509804" green="0.35294117650000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5MR-6g-a2s"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Results" id="Lro-DY-XFL">

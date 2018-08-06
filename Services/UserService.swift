@@ -33,40 +33,70 @@ struct UserService {
     
     //Reading from the database in order to display on the home page
     static func fetchEntryArray(completion: @escaping ([Entry]) -> Void) {
-        var entryArray = [Entry]()
         
         
         //if child.key != User.current.uid {
         //......normal stuff here....
         //}
         
-        let ref = Database.database().reference().child("Entries").child(User.current.uid) 
+        let ref = Database.database().reference().child("Entries")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else{
                 return completion([])
                 
             }
             
+            var entryArray = [Entry]()
+            
             for childSnapshot in snapshot {
                 if let entry = Entry(snapshot: childSnapshot) {
-                     entryArray.append(entry)
+                    entryArray.append(entry)
                 }
             }
-            completion(entryArray)
+            
+            
+            //
+            
+            let entriesTheCurrentUserHasVotedFor: [Entry] = []
+            
+            //new function
+            
+            //only entries not from cuuent user
+            let filteredArray = entryArray.filter({ (aEntry) -> Bool in
+                
+                if aEntry.userID == User.current.uid {
+                    return false
+                }
+                
+                //Add another filter to check whether the user has already voted for it (use the below model)
+                let userHasAlreadyVotedForA_Entry = entriesTheCurrentUserHasVotedFor.contains(where: { (bEntry) -> Bool in
+                    return bEntry.key == aEntry.key
+                })
+                
+                if userHasAlreadyVotedForA_Entry {
+                    return false
+                }
+                
+                return true
+            })
+            
+            
+            completion(filteredArray)
         })
     }
     
     //Refactoring login view controllers authentication process
-
-        static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
-            let ref = Database.database().reference().child("users").child(uid)
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                guard let user = User(snapshot: snapshot) else {
-                    return completion(nil)
-                }
-                
-                completion(user)
-            })
-        }
-
+    
+    static func show    (forUID uid: String, completion: @escaping (User?) -> Void) {
+        let ref = Database.database().reference().child("users").child(uid)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let user = User(snapshot: snapshot) else {
+                return completion(nil)
+            }
+            
+            completion(user)
+        })
+    }
+    
 }
+

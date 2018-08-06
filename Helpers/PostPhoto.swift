@@ -48,7 +48,7 @@ struct PostPhoto {
         
         let dict = entry.dictValue
     
-        let entryRef = Database.database().reference().child("Entries").child(currentUser.uid).childByAutoId()
+        let entryRef = Database.database().reference().child("Entries").childByAutoId()
         
         entryRef.updateChildValues(dict)
         

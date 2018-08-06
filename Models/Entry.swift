@@ -11,6 +11,7 @@ import Firebase
 
 struct Entry {
     
+    var key: String! = nil
     var userID: String
     var question: String
     var imageOneURL: String
@@ -35,9 +36,9 @@ struct Entry {
                 let question = dict["question"] as? String,
                 let imageOneCounter = dict["imageOneCounter"] as? Int,
                 let imageTwoCounter = dict["imageTwoCounter"] as? Int
-            else { return nil }
+                else { return nil }
 
-            //self.key = snapshot.key
+            self.key = snapshot.key
             self.imageOneURL = imageOneURL
             self.imageTwoURL = imageTwoURL
             self.question = question

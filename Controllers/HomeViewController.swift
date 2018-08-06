@@ -11,55 +11,54 @@ import UIKit
 import Kingfisher
 import FirebaseDatabase
 
-
-
 class HomeViewController: UIViewController {
     
     var entryArray: [Entry] = [Entry]()
-    var myImageURLs = [(url1: String, url2: String)]()
+//    var myImageURLs = [(url1: String, url2: String)]()
     
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
 
 
     
+    func updateUI() {
+        guard let nextEntry = entryArray.first else {
+            return print("entry array is empty")
+        }
+        
+        let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
+        self.imageOne.kf.setImage(with: displayImageOneUrl)
+
+        let displayImageTwoURl = URL(string: nextEntry.imageTwoURL)
+        self.imageTwo.kf.setImage(with: displayImageTwoURl)
+        
+        
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         let dispatchQueue = DispatchGroup()
         
-        //loading overlay here
+        //add loading overlay here (still needs to be implemented)
         
         dispatchQueue.enter()
 
         UserService.fetchEntryArray { (entryArray) in
-            for entry in entryArray {
-                self.entryArray.append(entry)
-            }
+            self.entryArray = entryArray
             
-            //hide overlay here
             
+            //hide overlay here (still needs to be implemented)
+            
+            self.updateUI()
             dispatchQueue.leave()
         }
         
         dispatchQueue.notify(queue: DispatchQueue.main) {
-            for entry in self.entryArray {
-                let imageTuple = (entry.imageOneURL, entry.imageTwoURL)
-                self.myImageURLs.append(imageTuple)
-            }
-            
-            let displayImageOneUrl = URL(string: self.myImageURLs[0].url1)
-            self.imageOne.kf.setImage(with: displayImageOneUrl)
-            
-            let displayImageTwoURl = URL(string: self.myImageURLs[0].url2)
-            self.imageTwo.kf.setImage(with: displayImageTwoURl)
-            print(self.myImageURLs)
-            
-            
-            //set random image tuple here
             
             
         }
+        
     }
     
     //on image click function
