@@ -29,6 +29,7 @@
 		03A2979E2110DB7300CBFBA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */; };
 		03A297A22110F62400CBFBA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A297A12110F62400CBFBA0 /* User.swift */; };
 		03AD2763210FAC7400CB7624 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AD2762210FAC7400CB7624 /* StorageReference+Post.swift */; };
+		03EBFF492118BDEF003E7FA7 /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EBFF482118BDEF003E7FA7 /* VoteService.swift */; };
 		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		03A2979D2110DB7300CBFBA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03A297A12110F62400CBFBA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03AD2762210FAC7400CB7624 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		03EBFF482118BDEF003E7FA7 /* VoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteService.swift; sourceTree = "<group>"; };
 		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
 		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				035C37BB2112437400E29BC0 /* UserService.swift */,
+				03EBFF482118BDEF003E7FA7 /* VoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				035C37BE211279E100E29BC0 /* Constants.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,
 				03A297A22110F62400CBFBA0 /* User.swift in Sources */,
+				03EBFF492118BDEF003E7FA7 /* VoteService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

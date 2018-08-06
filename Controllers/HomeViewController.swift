@@ -18,12 +18,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
 
-
+    @IBOutlet weak var Question: UILabel!
+    
     
     func updateUI() {
         guard let nextEntry = entryArray.first else {
             return print("entry array is empty")
         }
+        
+        let currentQuestion = nextEntry.question
         
         let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
         self.imageOne.kf.setImage(with: displayImageOneUrl)
@@ -73,21 +76,34 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGestureRecognizerOne = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let tapGestureRecognizerOne = UITapGestureRecognizer(target: self, action: #selector(leftImageTapped(tapGestureRecognizer:)))
         imageOne.addGestureRecognizer(tapGestureRecognizerOne)
-        let tapGestureRecognizerTwo = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let tapGestureRecognizerTwo = UITapGestureRecognizer(target: self, action: #selector(rightImageTapped(tapGestureRecognizer:)))
         imageTwo.addGestureRecognizer(tapGestureRecognizerTwo)
         
         
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
+    @objc func leftImageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        VoteService.create(isLeft: true, for: entryArray[0]) { (success) in
+            if success == false {
+                print("something went wrong")
+            }
+        }
         entryArray.removeFirst()
         updateUI()
         print("image tapped")
-        // Your action
+    }
+    
+    @objc func rightImageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        VoteService.create(isLeft: false, for: entryArray[0]) { (success) in
+            if success == false {
+                print("something went wrong")
+            }
+        }
+        entryArray.removeFirst()
+        updateUI()
+        print("image tapped")
     }
 
     

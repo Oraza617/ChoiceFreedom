@@ -68,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z5b-HV-Fwq"/>
                     <connections>
+                        <outlet property="Question" destination="s0R-5V-Mk5" id="mkA-8e-9Jc"/>
                         <outlet property="imageOne" destination="fba-T8-vTZ" id="4tA-Rb-SYg"/>
                         <outlet property="imageTwo" destination="gCy-5N-bS7" id="UsD-LY-sfB"/>
                     </connections>

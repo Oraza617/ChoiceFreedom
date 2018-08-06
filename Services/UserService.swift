@@ -33,11 +33,7 @@ struct UserService {
     
     //Reading from the database in order to display on the home page
     static func fetchEntryArray(completion: @escaping ([Entry]) -> Void) {
-        
-        
-        //if child.key != User.current.uid {
-        //......normal stuff here....
-        //}
+ 
         
         let ref = Database.database().reference().child("Entries")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -57,31 +53,51 @@ struct UserService {
             
             //
             
-            let entriesTheCurrentUserHasVotedFor: [Entry] = []
-            
-            //new function
-            
-            //only entries not from cuuent user
-            let filteredArray = entryArray.filter({ (aEntry) -> Bool in
+            fetchVotes(completion: { (entriesTheCurrentUserHasVotedFor) in
                 
-                if aEntry.userID == User.current.uid {
-                    return false
-                }
+                //new function
                 
-                //Add another filter to check whether the user has already voted for it (use the below model)
-                let userHasAlreadyVotedForA_Entry = entriesTheCurrentUserHasVotedFor.contains(where: { (bEntry) -> Bool in
-                    return bEntry.key == aEntry.key
+                //only entries not from current user
+                let filteredArray = entryArray.filter({ (aEntry) -> Bool in
+                    
+                    if aEntry.userID == User.current.uid {
+                        return false
+                    }
+                    
+                    //Add another filter to check whether the user has already voted for it (use the below model)
+                    let userHasAlreadyVotedForA_Entry = entriesTheCurrentUserHasVotedFor.contains(where: { (entryuid) -> Bool in
+                        return entryuid == aEntry.key
+                    })
+                    
+                    if userHasAlreadyVotedForA_Entry {
+                        return false
+                    }
+                    
+                    return true
                 })
                 
-                if userHasAlreadyVotedForA_Entry {
-                    return false
-                }
                 
-                return true
+                completion(filteredArray)
             })
             
+        })
+    }
+    
+    static func fetchVotes(completion: @escaping ([String]) -> Void) {
+        
+        
+        let ref = Database.database().reference().child("votes")
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else{
+                return completion([])
+            }
             
-            completion(filteredArray)
+            var keys: [String] = []
+            
+            
+            
+            
+            completion(keys)
         })
     }
     

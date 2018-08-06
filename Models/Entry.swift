@@ -18,18 +18,27 @@ struct Entry {
     var imageTwoURL : String
     var imageOneCounter: Int = 0
     var imageTwoCounter: Int = 0
+    //new voting properties
+    var voteCount: Int
+    let poster: User
     
     var dictValue: [String : Any] { //Creating dictionary to store entire entry of data
+        let userDict = ["uid" : poster.uid, "username" : poster.username]
+        
         return ["username" : userID,
                 "question" : question,
                 "imageOneURL" : imageOneURL,
                 "imageTwoURL" : imageTwoURL,
                 "imageOneCounter" : imageOneCounter,
-                "imageTwoCounter" : imageTwoCounter]
+                "imageTwoCounter" : imageTwoCounter,
+                "voteCount" : voteCount,
+                "poster" : userDict]
     }
     
         init?(snapshot: DataSnapshot) {
             guard let dict = snapshot.value as? [String : Any],
+                let voteCount = dict["voteCount"] as? Int,
+                let userDict = dict["poster"] as? [String : Any],
                 let imageOneURL = dict["imageOneURL"] as? String,
                 let imageTwoURL = dict["imageTwoURL"] as? String,
                 let username = dict["username"] as? String,
@@ -37,7 +46,9 @@ struct Entry {
                 let imageOneCounter = dict["imageOneCounter"] as? Int,
                 let imageTwoCounter = dict["imageTwoCounter"] as? Int
                 else { return nil }
-
+            
+            self.voteCount = voteCount
+            self.poster = User(uid: User.current.uid, username: username)
             self.key = snapshot.key
             self.imageOneURL = imageOneURL
             self.imageTwoURL = imageTwoURL
@@ -53,7 +64,8 @@ struct Entry {
         self.imageOneURL = imageOneURL
         self.imageTwoURL = imageTwoURL
         self.userID = userID
-        
+        self.voteCount = 0
+        self.poster = User.current
     }
     
 }
