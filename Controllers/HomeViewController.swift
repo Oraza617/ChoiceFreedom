@@ -14,8 +14,7 @@ import FirebaseDatabase
 class HomeViewController: UIViewController {
     
     var entryArray: [Entry] = [Entry]()
-//    var myImageURLs = [(url1: String, url2: String)]()
-    
+
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
 
@@ -31,9 +30,9 @@ class HomeViewController: UIViewController {
 
         let displayImageTwoURl = URL(string: nextEntry.imageTwoURL)
         self.imageTwo.kf.setImage(with: displayImageTwoURl)
-        
-        
     }
+    
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -61,8 +60,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    //on image click function
-    //display another random tuple pair of images
+    
     
 
     override func awakeFromNib() {
@@ -75,8 +73,22 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGestureRecognizerOne = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageOne.addGestureRecognizer(tapGestureRecognizerOne)
+        let tapGestureRecognizerTwo = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageTwo.addGestureRecognizer(tapGestureRecognizerTwo)
+        
+        
     }
     
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        entryArray.removeFirst()
+        updateUI()
+        print("image tapped")
+        // Your action
+    }
 
     
     override func didReceiveMemoryWarning() {
