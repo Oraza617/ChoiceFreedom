@@ -51,11 +51,9 @@ struct UserService {
             }
             
             
-            //
             
             fetchVotes(completion: { (entriesTheCurrentUserHasVotedFor) in
                 
-                //new function
                 
                 //only entries not from current user
                 let filteredArray = entryArray.filter({ (aEntry) -> Bool in
@@ -83,6 +81,7 @@ struct UserService {
         })
     }
     
+    //Fetch the voted on entries
     static func fetchVotes(completion: @escaping ([String]) -> Void) {
         
         
@@ -93,10 +92,10 @@ struct UserService {
             }
             
             var keys: [String] = []
-            
-            
-            
-            
+            for singleSnapshot in snapshot  {
+                keys.append(singleSnapshot.key)
+            }
+           
             completion(keys)
         })
     }

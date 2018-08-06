@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         }
         
         let currentQuestion = nextEntry.question
+        self.Question.text = currentQuestion
         
         let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
         self.imageOne.kf.setImage(with: displayImageOneUrl)
