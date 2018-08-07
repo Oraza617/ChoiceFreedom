@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
             return print("entry array is empty")
         }
         
-        let currentQuestion = nextEntry.question
+        let currentQuestion = nextEntry.question.uppercased()
         self.Question.text = currentQuestion
         
         let displayImageOneUrl = URL(string: nextEntry.imageOneURL)

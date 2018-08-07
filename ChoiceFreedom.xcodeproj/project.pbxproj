@@ -30,6 +30,10 @@
 		03A297A22110F62400CBFBA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A297A12110F62400CBFBA0 /* User.swift */; };
 		03AD2763210FAC7400CB7624 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AD2762210FAC7400CB7624 /* StorageReference+Post.swift */; };
 		03EBFF492118BDEF003E7FA7 /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EBFF482118BDEF003E7FA7 /* VoteService.swift */; };
+		03EBFF4B211909DF003E7FA7 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EBFF4A211909DF003E7FA7 /* Results.storyboard */; };
+		03EBFF53211A05DE003E7FA7 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EBFF52211A05DE003E7FA7 /* ResultCell.swift */; };
+		03EBFF55211A08A0003E7FA7 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EBFF54211A08A0003E7FA7 /* TableView+Extension.swift */; };
+		03EBFF58211A1FAB003E7FA7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EBFF57211A1FAB003E7FA7 /* Colors.swift */; };
 		EEB68A17610B2E6FFC74A786 /* Pods_ChoiceFreedom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		03A297A12110F62400CBFBA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03AD2762210FAC7400CB7624 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 		03EBFF482118BDEF003E7FA7 /* VoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteService.swift; sourceTree = "<group>"; };
+		03EBFF4A211909DF003E7FA7 /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		03EBFF52211A05DE003E7FA7 /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		03EBFF54211A08A0003E7FA7 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		03EBFF57211A1FAB003E7FA7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.debug.xcconfig"; sourceTree = "<group>"; };
 		50B9EC2F51450500D537CC76 /* Pods_ChoiceFreedom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoiceFreedom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoiceFreedom.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoiceFreedom/Pods-ChoiceFreedom.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,9 +89,11 @@
 			children = (
 				035C37BF21127ADE00E29BC0 /* Extensions */,
 				0358FDF62106984300EF46DA /* Supporting */,
+				03EBFF56211A1F95003E7FA7 /* Constants */,
 				035C37BA2112435300E29BC0 /* Services */,
 				0358FDF52106982500EF46DA /* Controllers */,
 				0358FDF72106985000EF46DA /* Storyboards */,
+				03EBFF4D211A03A1003E7FA7 /* Custom Cells */,
 				0358FE412107B94400EF46DA /* Models */,
 				0358FE48210941EB00EF46DA /* Helpers */,
 				030D1A4321065C1000B18267 /* ChoiceFreedom */,
@@ -130,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				030D1A5321065C1200B18267 /* Info.plist */,
-				035C37BD211279E100E29BC0 /* Constants.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				0358FDF8210698C900EF46DA /* Main.storyboard */,
+				03EBFF4A211909DF003E7FA7 /* Results.storyboard */,
 				035C37C22114CD6100E29BC0 /* Home.storyboard */,
 				0361EF992110C83E0061193B /* Login.storyboard */,
 			);
@@ -177,8 +187,27 @@
 			isa = PBXGroup;
 			children = (
 				035C37C021127B0300E29BC0 /* Storyboard+Utility.swift */,
+				03EBFF54211A08A0003E7FA7 /* TableView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03EBFF4D211A03A1003E7FA7 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03EBFF52211A05DE003E7FA7 /* ResultCell.swift */,
+			);
+			name = "Custom Cells";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03EBFF56211A1F95003E7FA7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				03EBFF57211A1FAB003E7FA7 /* Colors.swift */,
+				035C37BD211279E100E29BC0 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		17F494CCC131396B4856D2A7 /* Pods */ = {
@@ -261,6 +290,7 @@
 			files = (
 				030D1A5221065C1200B18267 /* LaunchScreen.storyboard in Resources */,
 				0358FDF021068C9100EF46DA /* GoogleService-Info.plist in Resources */,
+				03EBFF4B211909DF003E7FA7 /* Results.storyboard in Resources */,
 				030D1A4F21065C1200B18267 /* Assets.xcassets in Resources */,
 				035C37C32114CD6100E29BC0 /* Home.storyboard in Resources */,
 				0361EF9A2110C83E0061193B /* Login.storyboard in Resources */,
@@ -341,7 +371,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0358FE432107B98000EF46DA /* Entry.swift in Sources */,
+				03EBFF58211A1FAB003E7FA7 /* Colors.swift in Sources */,
 				0361C6B3210A571400DED245 /* PostPhoto.swift in Sources */,
+				03EBFF55211A08A0003E7FA7 /* TableView+Extension.swift in Sources */,
 				0358FE47210941CE00EF46DA /* StorePhoto.swift in Sources */,
 				0358FE3E2107A54B00EF46DA /* AddEntryController.swift in Sources */,
 				0358FE402107A57600EF46DA /* ResultsController.swift in Sources */,
@@ -354,6 +386,7 @@
 				035C37C521150F1700E29BC0 /* HomeViewController.swift in Sources */,
 				03A2979E2110DB7300CBFBA0 /* LoginViewController.swift in Sources */,
 				035C37BE211279E100E29BC0 /* Constants.swift in Sources */,
+				03EBFF53211A05DE003E7FA7 /* ResultCell.swift in Sources */,
 				030D1A4521065C1000B18267 /* AppDelegate.swift in Sources */,
 				03A297A22110F62400CBFBA0 /* User.swift in Sources */,
 				03EBFF492118BDEF003E7FA7 /* VoteService.swift in Sources */,

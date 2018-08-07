@@ -34,13 +34,12 @@ struct UserService {
     //Reading from the database in order to display on the home page
     static func fetchEntryArray(completion: @escaping ([Entry]) -> Void) {
  
-        
         let ref = Database.database().reference().child("Entries")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else{
                 return completion([])
-                
-            }
+                }
             
             var entryArray = [Entry]()
             
@@ -50,10 +49,7 @@ struct UserService {
                 }
             }
             
-            
-            
             fetchVotes(completion: { (entriesTheCurrentUserHasVotedFor) in
-                
                 
                 //only entries not from current user
                 let filteredArray = entryArray.filter({ (aEntry) -> Bool in
@@ -80,6 +76,42 @@ struct UserService {
             
         })
     }
+    
+    //This function is used to fetch all the results to populate the table view
+    static func fetchResultsArray(completion: @escaping ([Entry]) -> Void) {
+        
+        let ref = Database.database().reference().child("Entries")
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else{
+                return completion([])
+            }
+            
+            var entryArray = [Entry]()
+            
+            for childSnapshot in snapshot {
+                if let entry = Entry(snapshot: childSnapshot) {
+                    entryArray.append(entry)
+                }
+            }
+            
+            fetchVotes(completion: { (entriesTheCurrentUserHasVotedFor) in
+                
+                //only entries not from current user
+                let filteredArray = entryArray.filter({ (aEntry) -> Bool in
+                    
+                    if aEntry.userID == User.current.uid {
+                        return true
+                    }
+                    return false
+                })
+                
+                completion(filteredArray)
+            })
+            
+        })
+    }
+    
     
     //Fetch the voted on entries
     static func fetchVotes(completion: @escaping ([String]) -> Void) {
