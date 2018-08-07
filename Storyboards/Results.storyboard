@@ -41,7 +41,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="flP-m4-MP7">
-                                                    <rect key="frame" x="16" y="69" width="343" height="149.5"/>
+                                                    <rect key="frame" x="16" y="69" width="343" height="149.66666666666663"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vIQ-tj-buv">
                                                             <rect key="frame" x="0.0" y="0.0" width="169" height="149.5"/>
