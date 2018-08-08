@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imageTwo: UIImageView!
     @IBOutlet weak var Question: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
     
     func updateUI() {
         if let nextEntry = entryArray.first {
@@ -64,8 +65,6 @@ class HomeViewController: UIViewController {
         }
         
     }
-    
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -120,6 +119,30 @@ class HomeViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
         alertController.addAction(cancelAction)
     }
+    
+    //Allows user to flag a post
+    @IBAction func flagPost(_ sender: Any) {
+        //let poster = entryArray[0].poster
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    //        if poster.uid != User.current.uid {
+                let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default, handler: { action in
+                        FlagService.flag(self.entryArray[0])
+                        self.entryArray.removeFirst()
+                        self.updateUI()
+                        print("report post")
+                        let okAlert = UIAlertController(title: nil, message: "The post has been flagged.", preferredStyle: .alert)
+                        okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+                        self.present(okAlert, animated: true)
+
+                })
+                
+                alertController.addAction(flagAction)
+            //}
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        }
     
     
     override func didReceiveMemoryWarning() {

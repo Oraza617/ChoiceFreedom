@@ -62,6 +62,9 @@
                                 <state key="normal" title="Flag Post">
                                     <color key="titleColor" red="0.99115057500000003" green="1" blue="0.97001576280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="flagPost:" destination="fXW-8P-kAN" eventType="touchUpInside" id="Oow-rV-w23"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-0D-Vzi">
                                 <rect key="frame" x="299" y="33" width="60" height="30"/>
@@ -92,6 +95,7 @@
                         <outlet property="Question" destination="s0R-5V-Mk5" id="mkA-8e-9Jc"/>
                         <outlet property="imageOne" destination="fba-T8-vTZ" id="4tA-Rb-SYg"/>
                         <outlet property="imageTwo" destination="gCy-5N-bS7" id="UsD-LY-sfB"/>
+                        <outlet property="logOutButton" destination="ls0-wL-cMU" id="to2-MK-6eZ"/>
                         <outlet property="signOutButton" destination="Z3M-0D-Vzi" id="H7L-4E-6F1"/>
                     </connections>
                 </viewController>
