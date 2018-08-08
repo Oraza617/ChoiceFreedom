@@ -18,30 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TDU-yo-YfR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TDU-yo-YfR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice Freedom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cci-cl-Aga">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choice Freedom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cci-cl-Aga">
                                 <rect key="frame" x="21" y="134" width="332" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="46"/>
                                 <color key="textColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up and make the hard decisions in life a little easier." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-9X-mRQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up and make the hard decisions in life a little easier." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-9X-mRQ">
                                 <rect key="frame" x="38" y="173" width="299" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="FRx-xm-x1F"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="las-B0-H83">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="las-B0-H83">
                                 <rect key="frame" x="75" y="457" width="224" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2665251125810979" green="0.41355538329269215" blue="0.58790279436647752" alpha="0.80091502568493156" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="qOW-LF-Lfo"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Register or Log In">
                                     <color key="titleColor" red="0.87552183750000001" green="0.88402204949999996" blue="0.86702162549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,20 +55,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="OnH-9X-mRQ" firstAttribute="centerX" secondItem="las-B0-H83" secondAttribute="centerX" id="5pW-NJ-MDf"/>
-                            <constraint firstItem="TDU-yo-YfR" firstAttribute="leading" secondItem="23c-dd-6v7" secondAttribute="leading" id="HxG-3Y-UHn"/>
-                            <constraint firstItem="TDU-yo-YfR" firstAttribute="top" secondItem="23c-dd-6v7" secondAttribute="top" id="P5A-oB-4wG"/>
-                            <constraint firstItem="OnH-9X-mRQ" firstAttribute="top" secondItem="EJ7-a0-4B3" secondAttribute="top" constant="153" id="P5P-gV-0hZ"/>
-                            <constraint firstItem="TDU-yo-YfR" firstAttribute="centerX" secondItem="las-B0-H83" secondAttribute="centerX" id="UGQ-l0-NGI"/>
-                            <constraint firstItem="las-B0-H83" firstAttribute="leading" secondItem="EJ7-a0-4B3" secondAttribute="leading" constant="75" id="Wq1-b9-ses"/>
-                            <constraint firstItem="EJ7-a0-4B3" firstAttribute="bottom" secondItem="las-B0-H83" secondAttribute="bottom" constant="155" id="Z5t-OW-EUZ"/>
-                            <constraint firstAttribute="trailing" secondItem="TDU-yo-YfR" secondAttribute="trailing" id="i6Z-Da-F34"/>
-                            <constraint firstItem="TDU-yo-YfR" firstAttribute="bottom" secondItem="EJ7-a0-4B3" secondAttribute="bottom" id="nwg-GS-Qea"/>
-                            <constraint firstItem="OnH-9X-mRQ" firstAttribute="leading" secondItem="EJ7-a0-4B3" secondAttribute="leading" constant="38" id="oZm-6i-QtY"/>
-                            <constraint firstItem="Cci-cl-Aga" firstAttribute="top" secondItem="EJ7-a0-4B3" secondAttribute="top" constant="114" id="qW7-sd-5GD"/>
-                            <constraint firstItem="Cci-cl-Aga" firstAttribute="centerX" secondItem="OnH-9X-mRQ" secondAttribute="centerX" id="sf6-ip-ifu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EJ7-a0-4B3"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Az-mp-VtC"/>

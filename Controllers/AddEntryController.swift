@@ -92,6 +92,8 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        playButton.imageView?.contentMode = .scaleAspectFill
+        playButtonTwo.imageView?.contentMode = .scaleAspectFill
         playButton.isSelected = false
         playButtonTwo.isSelected = false
         // Do any additional setup after loading the view, typically from a nib.
