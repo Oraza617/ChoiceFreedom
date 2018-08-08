@@ -117,7 +117,7 @@ struct UserService {
     static func fetchVotes(completion: @escaping ([String]) -> Void) {
         
         
-        let ref = Database.database().reference().child("votes")
+        let ref = Database.database().reference().child("votes").child(User.current.uid)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else{
                 return completion([])
@@ -126,6 +126,7 @@ struct UserService {
             var keys: [String] = []
             for singleSnapshot in snapshot  {
                 keys.append(singleSnapshot.key)
+                print(keys)
             }
            
             completion(keys)

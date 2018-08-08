@@ -22,18 +22,27 @@ class HomeViewController: UIViewController {
     
     
     func updateUI() {
-        guard let nextEntry = entryArray.first else {
-            return print("entry array is empty")
+        if let nextEntry = entryArray.first {
+            imageOne.isUserInteractionEnabled =  true
+            imageTwo.isUserInteractionEnabled = true
+            
+            let currentQuestion = nextEntry.question.uppercased()
+            self.Question.text = currentQuestion
+            
+            let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
+            self.imageOne.kf.setImage(with: displayImageOneUrl)
+            
+            let displayImageTwoURl = URL(string: nextEntry.imageTwoURL)
+            self.imageTwo.kf.setImage(with: displayImageTwoURl)
+        } else {
+            Question.text = "No entries availible at this time"
+            imageOne.image = nil
+            imageTwo.image = nil
+            imageOne.isUserInteractionEnabled =  false
+            imageTwo.isUserInteractionEnabled = false
         }
         
-        let currentQuestion = nextEntry.question.uppercased()
-        self.Question.text = currentQuestion
-        
-        let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
-        self.imageOne.kf.setImage(with: displayImageOneUrl)
-
-        let displayImageTwoURl = URL(string: nextEntry.imageTwoURL)
-        self.imageTwo.kf.setImage(with: displayImageTwoURl)
+       
     }
     
     

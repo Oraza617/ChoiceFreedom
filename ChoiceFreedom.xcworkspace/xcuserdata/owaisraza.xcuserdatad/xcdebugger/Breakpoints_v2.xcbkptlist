@@ -19,5 +19,69 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Services/UserService.swift"
+            timestampString = "555385952.4384969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchEntryArray(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in static ChoiceFreedom.UserService.fetchEntryArray(completion: (Swift.Array&lt;ChoiceFreedom.Entry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ChoiceFreedom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/owaisraza/Dropbox/Make%20School%20Projects/Official%20Apps/ChoiceFreedom/Services/UserService.swift"
+                  timestampString = "555383973.805581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "885">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[1] = Value Promoted from Box&gt; of closure #1 (Swift.Array&lt;Swift.String&gt;) -&gt; () in closure #1 (__ObjC.DataSnapshot) -&gt; () in static ChoiceFreedom.UserService.fetchEntryArray(completion: (Swift.Array&lt;ChoiceFreedom.Entry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ChoiceFreedom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/owaisraza/Dropbox/Make%20School%20Projects/Official%20Apps/ChoiceFreedom/Services/UserService.swift"
+                  timestampString = "555383973.807749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Services/UserService.swift"
+            timestampString = "555385952.441415"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "fetchEntryArray(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
