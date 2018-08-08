@@ -123,6 +123,8 @@ class HomeViewController: UIViewController {
     //Allows user to flag a post
     @IBAction func flagPost(_ sender: Any) {
         //let poster = entryArray[0].poster
+        
+            
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     //        if poster.uid != User.current.uid {
                 let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default, handler: { action in

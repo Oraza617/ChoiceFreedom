@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PoW-pa-dS0">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,56 +14,87 @@
         <scene sceneID="9wb-kd-VdD">
             <objects>
                 <viewController id="TkJ-cE-dv4" customClass="AddEntryController" customModule="ChoiceFreedom" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lzB-6I-XKh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleAspectFill" id="lzB-6I-XKh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
-                                <rect key="frame" x="26" y="152" width="323" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Yq-WO9">
-                                <rect key="frame" x="118" y="537" width="139" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36729688170429625" green="0.79572613979949247" blue="0.38951338050034012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToRounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="SubmitEntry:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="czY-ao-Lwo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
-                                <rect key="frame" x="203" y="345" width="146" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Image">
-                                    <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="UploadSecondImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="IbZ-tS-1Av"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
-                                <rect key="frame" x="16" y="348" width="142" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Image">
-                                    <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="UploadFirstImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="gfE-LV-QSI"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-Br-X9O">
+                                <rect key="frame" x="0.0" y="69" width="320" height="430"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
+                                        <rect key="frame" x="16" y="0.0" width="288" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="mrX-ly-a8r"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTT-PG-8Zq">
+                                        <rect key="frame" x="16" y="165" width="288" height="95"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="95"/>
+                                                <state key="normal" title="Add Image">
+                                                    <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UploadFirstImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="gfE-LV-QSI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
+                                                <rect key="frame" x="144" y="0.0" width="144" height="95"/>
+                                                <state key="normal" title="Add Image">
+                                                    <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UploadSecondImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="IbZ-tS-1Av"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="158" id="If3-v2-lop"/>
+                                            <constraint firstItem="Tlg-ZP-3Xb" firstAttribute="height" secondItem="x0s-a6-F7F" secondAttribute="height" id="VWd-uP-60j"/>
+                                            <constraint firstItem="Tlg-ZP-3Xb" firstAttribute="width" secondItem="x0s-a6-F7F" secondAttribute="width" id="cBf-UG-IqM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Yq-WO9">
+                                        <rect key="frame" x="10" y="390" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.36729688170429625" green="0.79572613979949247" blue="0.38951338050034012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HBB-Bi-rNd"/>
+                                        </constraints>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToRounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SubmitEntry:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="czY-ao-Lwo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aSv-hd-I4B" firstAttribute="leading" secondItem="TCy-Br-X9O" secondAttribute="leading" constant="16" id="RkX-HU-b5M"/>
+                                    <constraint firstItem="nUD-Yq-WO9" firstAttribute="leading" secondItem="TCy-Br-X9O" secondAttribute="leading" constant="10" id="e6G-cx-2h4"/>
+                                    <constraint firstAttribute="trailing" secondItem="rTT-PG-8Zq" secondAttribute="trailing" constant="16" id="g1x-ZC-zQ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="aSv-hd-I4B" secondAttribute="trailing" constant="16" id="lnf-J1-gVZ"/>
+                                    <constraint firstItem="rTT-PG-8Zq" firstAttribute="leading" secondItem="TCy-Br-X9O" secondAttribute="leading" constant="16" id="rJr-Ju-2OU"/>
+                                    <constraint firstAttribute="trailing" secondItem="nUD-Yq-WO9" secondAttribute="trailing" constant="10" id="wpO-3A-fB8"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.2665251126" green="0.41355538330000002" blue="0.58790279440000004" alpha="0.80091502569999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iA1-eC-1c7" firstAttribute="trailing" secondItem="TCy-Br-X9O" secondAttribute="trailing" id="8qt-c7-hD8"/>
+                            <constraint firstItem="TCy-Br-X9O" firstAttribute="leading" secondItem="lzB-6I-XKh" secondAttribute="leading" id="Pq9-bH-d6J"/>
+                            <constraint firstItem="TCy-Br-X9O" firstAttribute="top" secondItem="iA1-eC-1c7" secondAttribute="top" constant="49" id="Ysj-PL-6W6"/>
+                            <constraint firstItem="iA1-eC-1c7" firstAttribute="bottom" secondItem="TCy-Br-X9O" secondAttribute="bottom" constant="20" id="wOd-2R-ptD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iA1-eC-1c7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="zhI-4D-OPA">
@@ -78,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5g-bp-tSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.60000000000002" y="245.12743628185908"/>
+            <point key="canvasLocation" x="931.875" y="244.01408450704227"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OlD-1F-eEr">

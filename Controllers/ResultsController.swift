@@ -20,7 +20,8 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     @IBOutlet weak var resultsTableView: UITableView!
     
-// copy and paste the fetch entry function and delete all the filters except for the curren uid thing and instead of false make it true and then call all of the shits here.
+    @IBOutlet weak var myResultsLabel: UILabel!
+    // copy and paste the fetch entry function and delete all the filters except for the curren uid thing and instead of false make it true and then call all of the shits here.
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,6 +53,8 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myResultsLabel.adjustsFontSizeToFitWidth = true
+        myResultsLabel.minimumScaleFactor = 0.2
         // Do any additional setup after loading the view, typically from a nib.
     }
     
