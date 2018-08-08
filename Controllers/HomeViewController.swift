@@ -107,9 +107,18 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func signOutButtonTapped(_ sender: Any) {
-        let initialViewController = UIStoryboard.initialViewController(for: .login)
-        self.view.window?.rootViewController = initialViewController
-        self.view.window?.makeKeyAndVisible()
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to log out?", preferredStyle: .alert)
+        
+        self.present(alertController, animated: true, completion: nil)
+        let logoutAction = UIAlertAction(title: "Yes", style: .default, handler: { action in
+            let initialViewController = UIStoryboard.initialViewController(for: .login)
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+        })
+        
+        alertController.addAction(logoutAction)
+        let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
     }
     
     
