@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PoW-pa-dS0">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="TkJ-cE-dv4" customClass="AddEntryController" customModule="ChoiceFreedom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="lzB-6I-XKh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-Br-X9O">
-                                <rect key="frame" x="0.0" y="69" width="414" height="598"/>
+                                <rect key="frame" x="0.0" y="69" width="320" height="342"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
-                                        <rect key="frame" x="16" y="0.0" width="382" height="35"/>
+                                        <rect key="frame" x="16" y="0.0" width="288" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="mrX-ly-a8r"/>
                                         </constraints>
@@ -31,10 +31,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rTT-PG-8Zq">
-                                        <rect key="frame" x="16" y="165" width="382" height="263"/>
+                                        <rect key="frame" x="16" y="165" width="288" height="7"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
-                                                <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="263"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="7"/>
                                                 <state key="normal" title="Add Image">
                                                     <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -43,7 +43,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
-                                                <rect key="frame" x="198.66666666666663" y="0.0" width="183.33333333333337" height="263"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="7"/>
                                                 <state key="normal" title="Add Image">
                                                     <color key="titleColor" red="0.92919254559999998" green="0.93821383250000001" blue="0.92017125879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -53,13 +53,12 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="158" id="If3-v2-lop"/>
                                             <constraint firstItem="Tlg-ZP-3Xb" firstAttribute="height" secondItem="x0s-a6-F7F" secondAttribute="height" id="VWd-uP-60j"/>
                                             <constraint firstItem="Tlg-ZP-3Xb" firstAttribute="width" secondItem="x0s-a6-F7F" secondAttribute="width" id="cBf-UG-IqM"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Yq-WO9">
-                                        <rect key="frame" x="10" y="558" width="394" height="40"/>
+                                        <rect key="frame" x="10" y="302" width="300" height="40"/>
                                         <color key="backgroundColor" red="0.36729688170429625" green="0.79572613979949247" blue="0.38951338050034012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HBB-Bi-rNd"/>
