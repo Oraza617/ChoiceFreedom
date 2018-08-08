@@ -36,22 +36,15 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let entry = entryArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell") as! ResultCell
-        
         let imageOneUrl = URL(string: entry.imageOneURL)
         cell.imageToTheLeft.kf.setImage(with: imageOneUrl)
-        
         let imageTwourl = URL(string: entry.imageTwoURL)
         cell.imageToTheRight.kf.setImage(with: imageTwourl)
-        
         cell.questionLabel.text = entry.question
-        
         cell.voteCountLeftImage.text = String(entry.imageOneCounter)
         cell.voteCountRightImage.text = String(entry.imageTwoCounter)
-
-        
         cell.setGradientForResultTableViewBackground(colorOne: Colors.kindaOwaisBlue, colorTwo: Colors.kindaOwaisBlue)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        
         return cell
     }
 

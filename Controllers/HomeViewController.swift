@@ -17,21 +17,17 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var imageTwo: UIImageView!
-
     @IBOutlet weak var Question: UILabel!
-    
+    @IBOutlet weak var signOutButton: UIButton!
     
     func updateUI() {
         if let nextEntry = entryArray.first {
             imageOne.isUserInteractionEnabled =  true
             imageTwo.isUserInteractionEnabled = true
-            
             let currentQuestion = nextEntry.question.uppercased()
             self.Question.text = currentQuestion
-            
             let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
             self.imageOne.kf.setImage(with: displayImageOneUrl)
-            
             let displayImageTwoURl = URL(string: nextEntry.imageTwoURL)
             self.imageTwo.kf.setImage(with: displayImageTwoURl)
         } else {
@@ -41,8 +37,6 @@ class HomeViewController: UIViewController {
             imageOne.isUserInteractionEnabled =  false
             imageTwo.isUserInteractionEnabled = false
         }
-        
-       
     }
     
     
@@ -67,12 +61,9 @@ class HomeViewController: UIViewController {
         }
         
         dispatchQueue.notify(queue: DispatchQueue.main) {
-            
-            
         }
         
     }
-    
     
     
 
@@ -81,8 +72,6 @@ class HomeViewController: UIViewController {
     }
     
 
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +104,14 @@ class HomeViewController: UIViewController {
         updateUI()
         print("image tapped")
     }
-
+    
+    
+    @IBAction func signOutButtonTapped(_ sender: Any) {
+        let initialViewController = UIStoryboard.initialViewController(for: .login)
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

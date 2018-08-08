@@ -41,6 +41,16 @@
                                     <outletCollection property="gestureRecognizers" destination="X8o-M8-ngy" appends="YES" id="Hs4-eh-9nt"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-0D-Vzi">
+                                <rect key="frame" x="269" y="20" width="90" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.44255415780000001" green="0.68180031590000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="fXW-8P-kAN" eventType="touchUpInside" id="8sg-KS-xeO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26666666666666666" green="0.41176470588235292" blue="0.58823529411764708" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="1R8-zd-uru"/>
@@ -50,6 +60,7 @@
                         <outlet property="Question" destination="s0R-5V-Mk5" id="mkA-8e-9Jc"/>
                         <outlet property="imageOne" destination="fba-T8-vTZ" id="4tA-Rb-SYg"/>
                         <outlet property="imageTwo" destination="gCy-5N-bS7" id="UsD-LY-sfB"/>
+                        <outlet property="signOutButton" destination="Z3M-0D-Vzi" id="H7L-4E-6F1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxV-x7-bvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
