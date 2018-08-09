@@ -46,6 +46,7 @@
 		030D1A5121065C1200B18267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030D1A5321065C1200B18267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		031ED12B211B56F700008C77 /* FlagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagService.swift; sourceTree = "<group>"; };
+		031ED12D211CADE800008C77 /* ChoiceFreedom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChoiceFreedom.entitlements; sourceTree = "<group>"; };
 		0346BED42111261300C02443 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		0358FDEF21068C9100EF46DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0358FDF8210698C900EF46DA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		030D1A4321065C1000B18267 /* ChoiceFreedom */ = {
 			isa = PBXGroup;
 			children = (
+				031ED12D211CADE800008C77 /* ChoiceFreedom.entitlements */,
 				030D1A4421065C1000B18267 /* AppDelegate.swift */,
 				030D1A4E21065C1200B18267 /* Assets.xcassets */,
 				030D1A5021065C1200B18267 /* LaunchScreen.storyboard */,
@@ -265,6 +267,11 @@
 				TargetAttributes = {
 					030D1A4021065C1000B18267 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -530,9 +537,11 @@
 			baseConfigurationReference = 3D6343400C03AE4AA69469D5 /* Pods-ChoiceFreedom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChoiceFreedom/ChoiceFreedom.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KD922J9MR;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Owais-Raza.ChoiceFreedom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -549,9 +558,11 @@
 			baseConfigurationReference = A5933F54017759E7E262EC44 /* Pods-ChoiceFreedom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChoiceFreedom/ChoiceFreedom.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KD922J9MR;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +570,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Owais-Raza.ChoiceFreedom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
