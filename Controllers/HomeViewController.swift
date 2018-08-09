@@ -23,8 +23,6 @@ class HomeViewController: UIViewController {
     
     func updateUI() {
         if let nextEntry = entryArray.first {
-            imageOne.isUserInteractionEnabled =  true
-            imageTwo.isUserInteractionEnabled = true
             let currentQuestion = nextEntry.question.uppercased()
             self.Question.text = currentQuestion
             let displayImageOneUrl = URL(string: nextEntry.imageOneURL)
