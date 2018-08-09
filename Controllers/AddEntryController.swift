@@ -83,7 +83,6 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
             
             //"Username" needs to be changed after login functionality is added
             PostPhoto.create(imageOne: playButton.currentBackgroundImage!, imageTwo: playButtonTwo.currentBackgroundImage!, userID: User.current.uid, question: question)
-        
         } else {
             print("it isn't working")
             
