@@ -24,18 +24,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up and make the hard decisions in life a little easier." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-9X-mRQ">
                                 <rect key="frame" x="38" y="206" width="244" height="70"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.99115057500000003" green="1" blue="0.97001576280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="las-B0-H83">
-                                <rect key="frame" x="16" y="293" width="288" height="65"/>
+                                <rect key="frame" x="20" y="293" width="280" height="65"/>
                                 <color key="backgroundColor" red="0.2665251125810979" green="0.41355538329269215" blue="0.58790279436647752" alpha="0.80091502568493156" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="20O-SM-Jk9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Register or Log In">
-                                    <color key="titleColor" red="0.99115057500000003" green="1" blue="0.97001576280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -47,12 +47,12 @@
                                     <action selector="loginButtonTapped:" destination="gaQ-ie-NCU" eventType="touchUpInside" id="9qQ-aB-a9n"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice Freedom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cci-cl-Aga">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhichOne?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cci-cl-Aga">
                                 <rect key="frame" x="15" y="134" width="290" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ZiV-Aq-3d1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="57"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -66,9 +66,9 @@
                             <constraint firstItem="Cci-cl-Aga" firstAttribute="centerX" secondItem="EJ7-a0-4B3" secondAttribute="centerX" id="Sqh-vY-RXY"/>
                             <constraint firstItem="Cci-cl-Aga" firstAttribute="top" secondItem="EJ7-a0-4B3" secondAttribute="top" constant="114" id="Uzb-ic-W5w"/>
                             <constraint firstItem="EJ7-a0-4B3" firstAttribute="trailing" secondItem="OnH-9X-mRQ" secondAttribute="trailing" constant="38" id="Ycw-FD-gju"/>
-                            <constraint firstItem="EJ7-a0-4B3" firstAttribute="trailing" secondItem="las-B0-H83" secondAttribute="trailing" constant="16" id="gbn-CO-5sz"/>
+                            <constraint firstItem="EJ7-a0-4B3" firstAttribute="trailing" secondItem="las-B0-H83" secondAttribute="trailing" constant="20" id="gbn-CO-5sz"/>
                             <constraint firstItem="TDU-yo-YfR" firstAttribute="top" secondItem="EJ7-a0-4B3" secondAttribute="top" constant="-42" id="nq1-Bs-lwf"/>
-                            <constraint firstItem="las-B0-H83" firstAttribute="leading" secondItem="EJ7-a0-4B3" secondAttribute="leading" constant="16" id="p9i-3s-xnK"/>
+                            <constraint firstItem="las-B0-H83" firstAttribute="leading" secondItem="EJ7-a0-4B3" secondAttribute="leading" constant="20" id="p9i-3s-xnK"/>
                             <constraint firstItem="TDU-yo-YfR" firstAttribute="bottom" secondItem="EJ7-a0-4B3" secondAttribute="bottom" constant="42" id="qVr-eN-qPX"/>
                             <constraint firstItem="Cci-cl-Aga" firstAttribute="leading" secondItem="23c-dd-6v7" secondAttribute="leading" constant="15" id="wcY-7n-i7b"/>
                             <constraint firstItem="OnH-9X-mRQ" firstAttribute="top" secondItem="Cci-cl-Aga" secondAttribute="bottom" constant="16" id="zb5-yG-6r9"/>
