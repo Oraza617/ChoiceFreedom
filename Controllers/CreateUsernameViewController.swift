@@ -16,7 +16,7 @@ class CreateUsernameViewController: UIViewController {
     //Textfield and next button
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
-    
+    @IBOutlet weak var termsAndConditions: UIButton!
     
     //View controller life cycle
     override func viewDidLoad() {
@@ -44,5 +44,11 @@ class CreateUsernameViewController: UIViewController {
         
         
         }
+    
+    @IBAction func termsAndConditionsAgreement(_ sender: Any) {
+        
+        UIApplication.shared.openURL(URL(string: "https://github.com/Oraza617/ChoiceFreedom/wiki/Terms-&-Conditions-for-%22WhichOne%3F!%22")!)
+    }
+    
     }
 
