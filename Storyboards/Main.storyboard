@@ -34,14 +34,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rTT-PG-8Zq">
                                         <rect key="frame" x="16" y="60" width="288" height="354"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-gk-c8s">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-gk-c8s">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="167"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="ody-Tk-i92" appends="YES" id="1h1-2G-WuM"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="86h-og-SvR">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="86h-og-SvR">
                                                 <rect key="frame" x="0.0" y="187" width="288" height="167"/>
                                                 <gestureRecognizers/>
                                                 <connections>
@@ -157,7 +157,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="372" height="696"/>
+        <image name="add-image" width="512" height="512"/>
         <image name="tab_plus_black" width="25" height="25"/>
     </resources>
 </document>
