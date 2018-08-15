@@ -12,91 +12,75 @@ import Firebase
 class AddEntryController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //All Entry Outlets
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var playButtonTwo: UIButton!
+    
+    @IBOutlet weak var bottomImage: UIImageView!
+    @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var question: UITextField!
     @IBOutlet weak var submit: UIButton!
     
-    
-    // First button
-    @IBAction func UploadFirstImage(_ sender: Any) {
-        let image = UIImagePickerController()
-        image.delegate = self
+    //All of this happens when the view controller is loaded (this occurs once)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        topImage.isHighlighted = false
+        bottomImage.isHighlighted = false
+
         
-        playButton.isSelected = true
-        playButtonTwo.isSelected = false
-        
-        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
-        
-        self.present(image, animated: true) {
-            //code after it's completed
-            
-        }
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func topImageClicked(_ sender: Any) {
+        print("image is tapped")
+        topImage.isHighlighted = true
+        bottomImage.isHighlighted = false
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) {
+    }
+}
+    @IBAction func bottomImageClicked(_ sender: Any) {
+        print("image tapped")
+        topImage.isHighlighted = false
+        bottomImage.isHighlighted = true
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true) {
+    }
+}
+        
+
     //Allows user to add images to their entry
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            
-            if playButton.isSelected{
-                //Sets button1 background image
-                playButton.setBackgroundImage(image, for: .normal)
-                playButton.setTitle("", for: UIControlState.normal)
-              }
-            
-            if playButtonTwo.isSelected {
-                //Sets button2 background image
-                playButtonTwo.setBackgroundImage(image, for: .normal)
-                playButtonTwo.setTitle("", for: UIControlState.normal)
+            print("top image is \(topImage.isHighlighted)")
+            print("bottom image is \(bottomImage.isHighlighted)")
+            if topImage.isHighlighted == true {
+                topImage.image = image
+            } else if bottomImage.isHighlighted{
+                bottomImage.image = image
             }
-            
-            
-        } else {
+            } else {
             //error message
         }
         self.dismiss(animated: true, completion: nil)
     }
     
     
-    
-    @IBAction func UploadSecondImage(_ sender: Any) {
-        let imageTwo = UIImagePickerController()
-        
-        imageTwo.delegate = self
-        
-        playButton.isSelected = false
-        playButtonTwo.isSelected = true
-        
-        imageTwo.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        
-        imageTwo.allowsEditing = false
-        self.present(imageTwo, animated: true) {
-        }
-        
-    }
-    
-    
     @IBAction func SubmitEntry(_ sender: Any) {
-        if playButton.currentBackgroundImage != nil &&
-            playButtonTwo.currentBackgroundImage != nil {
+        if topImage.image != nil &&
+            bottomImage.image != nil {
             
-            //"Username" needs to be changed after login functionality is added
-            PostPhoto.create(imageOne: playButton.currentBackgroundImage!, imageTwo: playButtonTwo.currentBackgroundImage!, userID: User.current.uid, question: question)
+            //Creates the URLs for each image and eventaully sends entire entry to Firebase
+            PostPhoto.create(imageOne: topImage.image!, imageTwo: bottomImage.image!, userID: User.current.uid, question: question)
         } else {
             print("it isn't working")
             
         }
     }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        playButton.imageView?.contentMode = .scaleAspectFill
-        playButtonTwo.imageView?.contentMode = .scaleAspectFill
-        playButton.isSelected = false
-        playButtonTwo.isSelected = false
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

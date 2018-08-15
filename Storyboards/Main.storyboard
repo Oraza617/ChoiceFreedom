@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-Br-X9O">
-                                <rect key="frame" x="0.0" y="50" width="320" height="449"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="454"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-hd-I4B">
                                         <rect key="frame" x="16" y="0.0" width="288" height="35"/>
@@ -32,30 +32,30 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rTT-PG-8Zq">
-                                        <rect key="frame" x="16" y="60" width="288" height="350"/>
+                                        <rect key="frame" x="16" y="60" width="288" height="354"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0s-a6-F7F">
-                                                <rect key="frame" x="100.5" y="0.0" width="87" height="165"/>
-                                                <state key="normal" title="Add Image">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-gk-c8s">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="167"/>
+                                                <gestureRecognizers/>
                                                 <connections>
-                                                    <action selector="UploadFirstImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="gfE-LV-QSI"/>
+                                                    <outletCollection property="gestureRecognizers" destination="ody-Tk-i92" appends="YES" id="1h1-2G-WuM"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-ZP-3Xb">
-                                                <rect key="frame" x="100.5" y="185" width="87" height="165"/>
-                                                <state key="normal" title="Add Image">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="86h-og-SvR">
+                                                <rect key="frame" x="0.0" y="187" width="288" height="167"/>
+                                                <gestureRecognizers/>
                                                 <connections>
-                                                    <action selector="UploadSecondImage:" destination="TkJ-cE-dv4" eventType="touchUpInside" id="IbZ-tS-1Av"/>
+                                                    <outletCollection property="gestureRecognizers" destination="h9e-8p-xBY" appends="YES" id="jzZ-nd-huc"/>
                                                 </connections>
-                                            </button>
+                                            </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="86h-og-SvR" firstAttribute="width" secondItem="sg3-gk-c8s" secondAttribute="width" id="3YE-yl-d22"/>
+                                            <constraint firstItem="86h-og-SvR" firstAttribute="height" secondItem="sg3-gk-c8s" secondAttribute="height" id="d8T-Uu-A4f"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-Yq-WO9">
-                                        <rect key="frame" x="10" y="435" width="300" height="14"/>
+                                        <rect key="frame" x="10" y="439" width="300" height="15"/>
                                         <color key="backgroundColor" red="0.11384449954590369" green="0.80163508650000015" blue="0.1172398932071459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,6 +74,7 @@
                                 <constraints>
                                     <constraint firstItem="rTT-PG-8Zq" firstAttribute="height" secondItem="TCy-Br-X9O" secondAttribute="height" multiplier="0.78" id="AO6-S4-btg"/>
                                     <constraint firstItem="aSv-hd-I4B" firstAttribute="leading" secondItem="TCy-Br-X9O" secondAttribute="leading" constant="16" id="RkX-HU-b5M"/>
+                                    <constraint firstItem="rTT-PG-8Zq" firstAttribute="top" secondItem="aSv-hd-I4B" secondAttribute="bottom" constant="25" id="Xco-Ce-Awz"/>
                                     <constraint firstItem="nUD-Yq-WO9" firstAttribute="leading" secondItem="TCy-Br-X9O" secondAttribute="leading" constant="10" id="e6G-cx-2h4"/>
                                     <constraint firstAttribute="trailing" secondItem="rTT-PG-8Zq" secondAttribute="trailing" constant="16" id="g1x-ZC-zQ2"/>
                                     <constraint firstAttribute="trailing" secondItem="aSv-hd-I4B" secondAttribute="trailing" constant="16" id="lnf-J1-gVZ"/>
@@ -87,7 +88,7 @@
                             <constraint firstItem="iA1-eC-1c7" firstAttribute="trailing" secondItem="TCy-Br-X9O" secondAttribute="trailing" id="8qt-c7-hD8"/>
                             <constraint firstItem="TCy-Br-X9O" firstAttribute="leading" secondItem="lzB-6I-XKh" secondAttribute="leading" id="Pq9-bH-d6J"/>
                             <constraint firstItem="TCy-Br-X9O" firstAttribute="top" secondItem="iA1-eC-1c7" secondAttribute="top" constant="30" id="Ysj-PL-6W6"/>
-                            <constraint firstItem="iA1-eC-1c7" firstAttribute="bottom" secondItem="TCy-Br-X9O" secondAttribute="bottom" constant="20" id="wOd-2R-ptD"/>
+                            <constraint firstItem="iA1-eC-1c7" firstAttribute="bottom" secondItem="TCy-Br-X9O" secondAttribute="bottom" constant="15" id="wOd-2R-ptD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iA1-eC-1c7"/>
                     </view>
@@ -95,15 +96,25 @@
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="playButton" destination="x0s-a6-F7F" id="NzC-sB-FhZ"/>
-                        <outlet property="playButtonTwo" destination="Tlg-ZP-3Xb" id="1pV-BX-DFc"/>
+                        <outlet property="bottomImage" destination="86h-og-SvR" id="Qqh-bt-Oi8"/>
                         <outlet property="question" destination="aSv-hd-I4B" id="aJq-eD-Nps"/>
                         <outlet property="submit" destination="nUD-Yq-WO9" id="9VK-ed-Lc4"/>
+                        <outlet property="topImage" destination="sg3-gk-c8s" id="Ryj-EQ-KED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5g-bp-tSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ody-Tk-i92">
+                    <connections>
+                        <action selector="topImageClicked:" destination="TkJ-cE-dv4" id="9B0-h6-Kau"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="h9e-8p-xBY">
+                    <connections>
+                        <action selector="bottomImageClicked:" destination="TkJ-cE-dv4" id="Xbh-ss-Yrc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1354" y="200"/>
+            <point key="canvasLocation" x="1353.75" y="199.64788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OlD-1F-eEr">
@@ -146,6 +157,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="372" height="696"/>
         <image name="tab_plus_black" width="25" height="25"/>
     </resources>
 </document>
