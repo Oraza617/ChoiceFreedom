@@ -75,6 +75,20 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
             
             //Creates the URLs for each image and eventaully sends entire entry to Firebase
             PostPhoto.create(imageOne: topImage.image!, imageTwo: bottomImage.image!, userID: User.current.uid, question: question)
+            
+            // Creates a pop up to let user know their entry has been submitted
+            let refreshAlert = UIAlertController(title: "Entry Submitted. Thanks!", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+            }))
+            present(refreshAlert, animated: true, completion: nil)
+            
+            // Clear out the question on top after user submits entry
+            question.text = ""
+
+            // This removes the images from the view once they're submitted
+            topImage.image = UIImage(named: "add-image")
+            bottomImage.image = UIImage(named: "add-image")
+            
         } else {
             print("it isn't working")
             
