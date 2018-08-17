@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
             let displayImageTwoURl = URL(string: nextEntry.imageTwoURL)
             self.imageTwo.kf.setImage(with: displayImageTwoURl)
         } else {
-            Question.text = "No entries availible at this time"
+            Question.text = "No entries available at this time"
             imageOne.image = nil
             imageTwo.image = nil
             imageOne.isUserInteractionEnabled =  false
