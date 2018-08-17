@@ -35,7 +35,7 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
+        image.allowsEditing = true
         self.present(image, animated: true) {
     }
 }
@@ -46,7 +46,7 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
+        image.allowsEditing = true
         self.present(image, animated: true) {
     }
 }
@@ -101,4 +101,3 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         // Dispose of any resources that can be recreated.
     }
 }
-
