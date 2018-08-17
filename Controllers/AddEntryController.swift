@@ -35,7 +35,7 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
+        image.allowsEditing = true
         self.present(image, animated: true) {
     }
 }
@@ -46,7 +46,7 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
+        image.allowsEditing = true
         self.present(image, animated: true) {
     }
 }
@@ -54,13 +54,15 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
 
     //Allows user to add images to their entry
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            print("top image is \(topImage.isHighlighted)")
-            print("bottom image is \(bottomImage.isHighlighted)")
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            //Checks where the user wants to place their selected image
             if topImage.isHighlighted == true {
-                topImage.image = image
+                let croppedImage = cropToBounds(image: image, width: 750, height: 750)
+                topImage.image = croppedImage
+                
             } else if bottomImage.isHighlighted{
-                bottomImage.image = image
+                let croppedImage = cropToBounds(image: image, width: 750, height: 750)
+                bottomImage.image = croppedImage
             }
             } else {
             //error message
@@ -94,6 +96,36 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
             
         }
     }
+    
+    //Crops image that user selects to a 1:1 ratio and retains quality
+    func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {
+        let cgimage = image.cgImage!
+        let contextImage: UIImage = UIImage(cgImage: cgimage)
+        let contextSize: CGSize = contextImage.size
+        var posX: CGFloat = 0.0
+        var posY: CGFloat = 0.0
+        var cgwidth: CGFloat = CGFloat(width)
+        var cgheight: CGFloat = CGFloat(height)
+        // See what size is longer and create the center off of that
+        if contextSize.width > contextSize.height {
+            posX = ((contextSize.width - contextSize.height) / 2)
+            posY = 0
+            cgwidth = contextSize.height
+            cgheight = contextSize.height
+        } else {
+            posX = 0
+            posY = ((contextSize.height - contextSize.width) / 2)
+            cgwidth = contextSize.width
+            cgheight = contextSize.width
+        }
+        let rect: CGRect = CGRect(x: posX, y: posY, width: cgwidth, height: cgheight)
+        // Create bitmap image from context using the rect
+        let imageRef: CGImage = cgimage.cropping(to: rect)!
+        // Create a new image based on the imageRef and rotate back to the original orientation
+        let image: UIImage = UIImage(cgImage: imageRef, scale: image.scale, orientation: image.imageOrientation)
+        
+        return image
+    }
    
     
     override func didReceiveMemoryWarning() {
@@ -101,4 +133,3 @@ class AddEntryController: UIViewController, UINavigationControllerDelegate, UIIm
         // Dispose of any resources that can be recreated.
     }
 }
-
