@@ -91,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				035C37BF21127ADE00E29BC0 /* Extensions */,
-				0358FDF62106984300EF46DA /* Supporting */,
 				03EBFF56211A1F95003E7FA7 /* Constants */,
 				035C37BA2112435300E29BC0 /* Services */,
 				0358FDF52106982500EF46DA /* Controllers */,
@@ -117,6 +116,7 @@
 		030D1A4321065C1000B18267 /* ChoiceFreedom */ = {
 			isa = PBXGroup;
 			children = (
+				030D1A5321065C1200B18267 /* Info.plist */,
 				031ED12D211CADE800008C77 /* ChoiceFreedom.entitlements */,
 				030D1A4421065C1000B18267 /* AppDelegate.swift */,
 				030D1A4E21065C1200B18267 /* Assets.xcassets */,
@@ -138,14 +138,6 @@
 				035C37C421150F1700E29BC0 /* HomeViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		0358FDF62106984300EF46DA /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-				030D1A5321065C1200B18267 /* Info.plist */,
-			);
-			path = Supporting;
 			sourceTree = "<group>";
 		};
 		0358FDF72106985000EF46DA /* Storyboards */ = {
@@ -540,7 +532,7 @@
 				CODE_SIGN_ENTITLEMENTS = ChoiceFreedom/ChoiceFreedom.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96ARV772TN;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ChoiceFreedom/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,7 +553,7 @@
 				CODE_SIGN_ENTITLEMENTS = ChoiceFreedom/ChoiceFreedom.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96ARV772TN;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ChoiceFreedom/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
